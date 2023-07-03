@@ -1,0 +1,23 @@
+.close-fake
+{
+        --background:transparent ;
+        ion-icon
+        {
+            font-size: 2rem;
+        }
+        margin-top: 70px;
+}
+
+ion-content
+{
+--background:transparent;
+position: sticky;
+left: 0px;
+top: 0px;
+z-index: -1;
+}
+
+img{
+    border-radius: 100%!important;
+
+}

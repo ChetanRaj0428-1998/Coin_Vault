@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align:center ;"><strong>Stats</strong></ion-title>
+ 
+  <ion-icon class="ion-activatable ripple-parent"  name="close-sharp" slot="end" style="font-size:xx-large;margin-right: 10px; padding: 10px;" (click)="dismiss()"></ion-icon> 
+  
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+<ion-list lines="full" style="padding: 0px;">
+  <ion-item>
+    <p><strong>Total Number Different of coins:</strong></p>
+    <ion-badge color="success" slot="end">{{totalDiffCoins}}</ion-badge>  
+  </ion-item>
+<ion-item>
+  <p><strong>Total Number of coins:</strong></p>
+  <ion-badge slot="end">{{totalCoins}}</ion-badge>  
+</ion-item>
+
+<ion-item>
+  <p><strong>Total price of all coins:</strong></p>
+  <ion-badge color="danger" slot="end">{{totalPrice}}</ion-badge>  
+</ion-item>
+
+<ion-item lines="none">
+  <p><strong>Mint Colection:</strong></p>
+</ion-item>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+
+
+      <ion-badge mode="ios" color="primary">
+        <ion-icon  name="ellipse"  color="dark"></ion-icon>
+
+        {{Mints[0]}}</ion-badge>
+    </ion-col>
+
+    <ion-col>
+      <ion-badge mode="ios" color="danger">
+        <img  src="https://cdn-icons-png.flaticon.com/512/445/445102.png" width="21px"  height="23px" >
+        {{Mints[1]}} </ion-badge>
+    </ion-col>
+    
+    <ion-col>
+      <ion-badge mode="ios" color="warning">
+        <ion-icon  name="star" color="dark"></ion-icon>
+
+        {{Mints[2]}}</ion-badge>
+
+    </ion-col>
+    
+    <ion-col>
+      
+      <ion-badge mode="ios" color="success">
+        <ion-icon  name="close-circle-sharp" color="dark"></ion-icon>
+        {{Mints[3]}}</ion-badge>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<hr>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-select placeholder="Select Coin" [(ngModel)]="deno" name="deno">
+          <ion-select-option value="1 Paise">1 Paise</ion-select-option>
+          <ion-select-option value="2 Paise">2 Paise</ion-select-option>
+          <ion-select-option value="3 Paise">3 Paise</ion-select-option>
+          <ion-select-option value="5 Paise">5 Paise</ion-select-option>
+          <ion-select-option value="10 Paise">10 Paise</ion-select-option>
+          <ion-select-option value="20 Paise">20 Paise</ion-select-option>
+          <ion-select-option value="25 Paise">25 Paise</ion-select-option>
+          <ion-select-option value="50 Paise">50 Paise</ion-select-option>
+                <ion-select-option value="1 Rupee">1 Rupee</ion-select-option>
+                <ion-select-option value="2 Rupees">2 Rupees</ion-select-option>
+                <ion-select-option value="5 Rupees">5 Rupees</ion-select-option>
+                <ion-select-option value="10 Rupees">10 Rupees</ion-select-option>
+             
+              </ion-select>
+         
+      </ion-col>
+      
+      <ion-col size="4">
+        <ion-button (click)="RupeeTypeProcess(deno)">Check</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item><p><strong>Coins:</strong> </p>
+    <ion-badge style="margin-top: 4px;" slot="end" color="warning">{{RupeeCoins}}</ion-badge>
+    </ion-item>
+
+</ion-list>
+</ion-content>

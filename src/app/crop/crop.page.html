@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title><strong style="text-align:center ;">Crop Image </strong> <ion-icon style="margin: 5px;font-weight: 500;" name="crop-sharp"></ion-icon></ion-title>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <image-cropper *ngIf="imgTocrop"
+  [imageFile]="imgTocrop"
+  [maintainAspectRatio]="true"
+  [aspectRatio]=" 2 / 2"
+  [roundCropper]="true"
+  [imageQuality]="100"
+  [canvasRotation]="canvasRotate"
+  (imageLoaded)="imageLoaded()"
+  format="jpeg"
+  (imageCropped)="imageCropped($event)"
+ 
+></image-cropper>
+<ion-grid *ngIf="imgTocrop" style="position: fixed;">
+  <ion-row>
+    <ion-col>
+      
+<ion-button color="medium" expand="full"   (click)="rotateRight()">Rotate Right <img src="assets/RR.png" alt="" ></ion-button>
+    </ion-col>
+  
+    <ion-col>
+      <ion-button  color="light" expand="full"   (click)="rotateLeft()">Rotate Left <img src="assets/LL.png" alt="" ></ion-button>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button *ngIf="imgTocrop" expand="full" style="text-align: center;" color="danger"  (click)="cancel()">Cancel</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button *ngIf="imgTocrop" expand="full" style="text-align: center;" color="primary"  (click)="crop()">Crop</ion-button>
+    </ion-col>
+    
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>

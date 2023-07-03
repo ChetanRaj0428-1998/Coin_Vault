@@ -1,0 +1,8 @@
+{
+  "name": "my-coins",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

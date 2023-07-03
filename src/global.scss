@@ -1,0 +1,88 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+.modal-wrapper{
+    background: transparent !important;
+    --backdrop-opacity: 0!important;
+    //height: 58%!important;
+    
+}
+
+.cropper .move 
+{
+  width: 100%;
+  cursor: move;
+  border: 1px solid red !important;
+}
+
+.cropper .square 
+{
+background: #0c81ff!important;
+}
+
+.cdk-virtual-scroll-content-wrapper {
+  position: inherit!important;
+  top: 0;
+  left: 0;
+  contain: content;
+}
+
+// html {
+//   scroll-behavior: smooth!important;
+// }
+
+// img{
+//   border-radius: 100%!important;
+// }
+
+.sc-ion-modal-md-h 
+{
+  --backdrop-opacity: 0!important;
+  
+  height:inherit!important;
+  
+}
+
+.slides-md
+{
+  border-radius: 100%!important;
+}
+.swiper-wrapper
+{
+  border-radius: 100%!important;
+
+}
+.swiper-slide
+{
+  border-radius: 100%!important;
+
+}
+.swiper-zoom-container
+{
+  border-radius: 100%!important;
+
+}
+

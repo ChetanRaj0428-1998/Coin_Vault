@@ -1,0 +1,119 @@
+hr {
+    border-top: 1px solid #dedede;
+  }
+
+  ion-content {
+    
+    will-change: scroll-position;
+    // overwrite inline styles & hiding the scrollbar
+    background-color: white;
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    position: sticky;
+left: 0px;
+top: 0px;
+z-index: -1;
+  } 
+
+  ion-radio
+  {
+    margin-left: 10px;
+    
+  }
+
+  .ripple-parent {
+    position: relative;
+    overflow: hidden;
+  }
+
+  ion-chip
+  {
+    height: 30px;
+    width: auto;
+    ion-label
+    {
+      font-size: small;
+      
+    }
+    
+  }
+
+  ion-avatar
+  {
+    height: 50px;
+    width: 50px;
+  }
+
+  cdk-virtual-scroll-viewport{
+    will-change: scroll-position;
+    // overwrite inline styles & hiding the scrollbar
+    background-color: white;
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    
+    
+    //height: 1000px;
+    width: 100%;
+    
+    //ion-list
+   // {
+    
+      ion-item
+      {
+        height: 68px;
+        
+      }
+    
+   // }
+  
+   
+    
+   }
+
+   .view
+   {
+     display: contents;
+   }
+
+   ion-list { 
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    
+    ion-label
+    {
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+  }
+
+  ion-virtual-scroll { 
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    
+    ion-label
+    {
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+  }
+
+  .visibleList
+{
+  height: 0px;
+}
+

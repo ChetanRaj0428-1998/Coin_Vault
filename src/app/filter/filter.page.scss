@@ -1,0 +1,49 @@
+.close-fake
+{
+        --background:transparent!important ;
+        ion-icon
+        {
+            font-size: 2rem;
+        }
+        margin-top: 70px;
+        
+}
+
+ion-content
+{
+--background:transparent!important;
+position: sticky;
+left: 0px;
+top: 0px;
+z-index: -1;
+opacity: 0!important;
+
+}
+
+.center {
+   
+  display: block;
+  //width: 270px;
+  margin-left:15%;//30px
+  margin-top:25%;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  margin: 0px!important;
+  padding: 0px!important;
+    }
+
+
+    .colpad
+    {
+      //padding-left:10%;
+      padding-right: 0%;
+      
+    }
+
+   
+    .transparent-div {
+      opacity: 0!important; /* Adjust the value between 0 (fully transparent) and 1 (fully opaque) */
+    }
+    
+    

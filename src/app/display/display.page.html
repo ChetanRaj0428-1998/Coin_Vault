@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title><strong></strong></ion-title>
+ 
+  <ion-icon class="ion-activatable ripple-parent"  name="close-sharp" slot="end" style="font-size:xx-large;margin-right: 10px; padding: 10px;" (click)="dismiss()"></ion-icon> 
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+         <div [class.flip-box]="flag">
+      <div class="flip-box-inner ">
+        <div class="flip-box-front ">
+            <img src="{{CoinData.backUrl}}"  height="200px" width="200px"   class="center" (click)="presentModal(CoinData.backUrl)">    
+        </div>
+        <div class="flip-box-back">
+          <img src="{{CoinData.frontUrl}}" height="200px" width="200px"   class="center" (click)="presentModal(CoinData.frontUrl)"> 
+        </div>
+      </div>
+      
+    </div>
+    <ion-fab-button [@rotatedState]='state' color="dark" (click)="flip()">
+      <ion-icon name="git-compare-outline"></ion-icon>               
+       </ion-fab-button>
+
+    <ion-card-content style="padding: 0px;">
+      <ion-card-title style="padding:10px">
+        {{CoinData.name}}
+        </ion-card-title>
+      <ion-list lines="full" style="padding: 0px;">
+      <ion-item><h2>Denomination:</h2>  <ion-badge slot="end" color="primary">{{CoinData.deno}}</ion-badge></ion-item>
+     
+      <ion-item><h2>Year:</h2>  <ion-badge slot="end" color="success">{{CoinData.year}}</ion-badge> </ion-item>
+      <ion-item><h2>Mint:</h2>
+        <ion-badge slot="end" *ngIf="CoinData.mint=='Diamond'" style="padding: 3px;" color="danger">Bombay <img  src="https://cdn-icons-png.flaticon.com/512/445/445102.png" width="22px"  height="18px" >
+        </ion-badge>
+        <ion-badge slot="end" *ngIf="CoinData.mint=='Star'" style="padding: 3px;" color="warning">Hyderabad<ion-icon  name="star" color="dark"></ion-icon></ion-badge>
+        <ion-badge slot="end" *ngIf="CoinData.mint=='Dot'" style="padding: 3px;" color="primary"> Noida <ion-icon  name="ellipse"  color="dark"></ion-icon>
+        </ion-badge>
+        <ion-badge slot="end" *ngIf="CoinData.mint=='Blank'" style="padding: 3px;" color="success">Calcutta<ion-icon  name="close-circle-sharp" color="dark"></ion-icon>
+        </ion-badge>
+      
+      
+      </ion-item>
+      <ion-item><h2>Price:</h2>  <ion-badge slot="end" color="warning">{{CoinData.price}}</ion-badge></ion-item>
+      <ion-item><h2>Quantity:</h2>  <ion-badge slot="end" color="danger">{{CoinData.quantity}}</ion-badge></ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

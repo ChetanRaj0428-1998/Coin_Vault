@@ -1,0 +1,171 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title style="text-align:center ;">
+     <strong>
+  Update Coin Details    
+ </strong> 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+<form  #f="ngForm">
+
+  <ion-item>
+    <ion-label class="labelsize" position="floating">Name of the coin</ion-label>
+    <ion-input [(ngModel)]="coin.name" name="coin.name" type="text" spellcheck="true" clear-input="true"></ion-input>
+  </ion-item>
+  <h4 style="margin-left:15px;">Denomination</h4>
+  <ion-select value="1 Rupee" [(ngModel)]="coin.deno" name="coin.deno">
+  <ion-select-option value="1 Paise">1 Paise</ion-select-option>
+  <ion-select-option value="2 Paise">2 Paise</ion-select-option>
+  <ion-select-option value="3 Paise">3 Paise</ion-select-option>
+  <ion-select-option value="5 Paise">5 Paise</ion-select-option>
+  <ion-select-option value="10 Paise">10 Paise</ion-select-option>
+  <ion-select-option value="20 Paise">20 Paise</ion-select-option>
+  <ion-select-option value="25 Paise">25 Paise</ion-select-option>
+  <ion-select-option value="50 Paise">50 Paise</ion-select-option>
+        <ion-select-option value="1 Rupee">1 Rupee</ion-select-option>
+        <ion-select-option value="2 Rupees">2 Rupees</ion-select-option>
+        <ion-select-option value="5 Rupees">5 Rupees</ion-select-option>
+        <ion-select-option value="10Rupees">10 Rupees</ion-select-option>
+     
+      </ion-select>
+  <hr>
+  <ion-item>
+    <ion-label class="labelsize" position="fixed">Quantity :</ion-label>
+    <ion-input [(ngModel)]="coin.quantity" name="coin.quantity" inputmode="numeric"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+  <h4>Year</h4>
+  </ion-item>
+  <ion-datetime   [(ngModel)]="coin.year" name="year"  display-format="YYYY" picker-format="YYYY" placeholder="Select Year"></ion-datetime>
+  <hr>
+
+    <ion-item lines="none"> 
+      <h4>Mint</h4>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-chip color="primary" [class.chipone]="chipflag==1" (click)="chipSelect(1, 'Dot')">
+              <ion-icon *ngIf="chipflag!=1" name="ellipse"  color="dark"></ion-icon>
+              <ion-icon *ngIf="chipflag==1" name="ellipse"  color="light"></ion-icon>
+              <ion-label [class.chiplabel]="chipflag==1"><strong>Noida</strong></ion-label>
+            </ion-chip>
+            <ion-chip color="danger" [class.chiptwo]="chipflag==2" (click)="chipSelect(2, 'Diamond')">
+              <img *ngIf="chipflag!=2" src="https://cdn-icons-png.flaticon.com/512/445/445102.png" width="20px"  height="25px" style="margin-right:5px;">
+              <img *ngIf="chipflag==2" src="/assets/flat-diamond-icon-700156.png" width="20px"  height="20px" style="margin-right:5px;">
+              <ion-label [class.chiplabel]="chipflag==2"><strong>Bombay</strong></ion-label>
+            </ion-chip>
+          </ion-col>
+   
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-chip color="warning" [class.chipthree]="chipflag==3" (click)="chipSelect(3, 'Star')">
+              <ion-icon *ngIf="chipflag!=3" name="star" color="dark"></ion-icon>
+              <ion-icon *ngIf="chipflag==3" name="star" color="light"></ion-icon>
+              <ion-label [class.chiplabel]="chipflag==3"><strong>Hyderabad</strong></ion-label>
+            </ion-chip>
+            <ion-chip color="success" [class.chipfour]="chipflag==4" (click)="chipSelect(4, 'Blank')">
+              <ion-icon *ngIf="chipflag!=4"  name="close-circle" color="dark"></ion-icon>
+              <ion-icon *ngIf="chipflag==4"  name="close-circle" color="light"></ion-icon>
+              <ion-label [class.chiplabel]="chipflag==4"> <strong>Calcutta</strong></ion-label>
+            </ion-chip>
+          
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+  <hr>
+  <!--
+<h4 style="margin-left:15px;">Price Range <br>  </h4>
+  <h4> <strong>₹</strong> {{val.lower}} <span *ngIf="val.upper>0">-</span> {{val.upper}}</h4>
+  <ion-range style="padding-top:10px;" [(ngModel)]="val"  name="price" min="1" max="1000" value="0"   step="1" pin="true"  ticks="true"  id="dual-range" dual-knobs color="dark">
+  
+  </ion-range>
+  
+  -->
+  <ion-item lines="none">
+    <ion-label class="labelsize" position="fixed">Price ₹:</ion-label>
+    <ion-input [(ngModel)]="coin.price" name="coin.price" inputmode="numeric"></ion-input>
+ 
+  </ion-item>
+   <hr>
+  <ion-radio-group >
+      
+    <h4 style="margin-left:15px;">Coin Image</h4>
+  <ion-grid>
+  <ion-row>
+      <ion-col>
+                
+  <ion-label for="camera" >Use <br> Camera </ion-label>
+  <ion-radio  (ionFocus)="setPhotoOption(1)" name="camera"  value="camera" class="form-control" ></ion-radio>
+  
+  </ion-col>
+  <ion-col>
+    <ion-label for="gallery" >Choose <br>from Gallery</ion-label>
+    <ion-radio (ionFocus)="setPhotoOption(2)"  name="gallery"   value="gallery" class="form-control" ></ion-radio>
+   </ion-col>
+   </ion-row>
+   </ion-grid>
+   
+     
+  
+  </ion-radio-group>
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-button color="dark" size="small" (click)="getCameraFront()"><strong>Front Side</strong></ion-button></ion-col>
+      <ion-col><ion-button color="light" size="small" (click)="getCameraBack()"><strong>Back Side</strong></ion-button>
+      </ion-col>
+  
+      </ion-row>
+      <ion-row>
+        <ion-col>
+      <ion-button color="medium" size="small" (click)="show()"><strong>Show Image</strong></ion-button>
+
+        </ion-col>
+      </ion-row>
+      <div *ngIf="selectedPhoto && selectedPhoto1 ">
+        <!--
+          <ion-button color="warning" style="margin-left: 50px;" (click)="flip()" >
+          Flip the coin
+        </ion-button>
+        -->
+        <div [class.flip-box]="flag">
+          <div class="flip-box-inner ">
+            <div class="flip-box-front ">
+                <img src="{{selectedPhoto}}" height="200" width="200"  class="center" (click)="presentModal(selectedPhoto)">    
+            </div>
+            <div class="flip-box-back">
+              <img src="{{selectedPhoto1}}" height="200" width="200"  class="center" (click)="presentModal(selectedPhoto1)"> 
+            </div>
+          </div>
+          
+        </div>
+        <ion-fab-button [@rotatedState]='state' color="warning" (click)="flip()">
+          <ion-icon name="git-compare-outline"></ion-icon>               
+           </ion-fab-button>
+      </div>
+      
+    
+    </ion-grid>
+
+    
+ 
+  
+  
+  <ion-grid >
+    <ion-row >
+      <ion-col>
+      <ion-button color="danger" expand="full" (click)="dismiss()">Cancel</ion-button>
+      </ion-col>
+      <ion-col style="z-index: 1;">
+      <ion-button  color="success" expand="full" (click)="SubmitForm(coin)">Update</ion-button>
+      </ion-col>
+    
+    </ion-row>
+    </ion-grid>
+
+</form>
+  
+</ion-content>

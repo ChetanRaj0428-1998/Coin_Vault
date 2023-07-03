@@ -1,0 +1,25 @@
+
+ <ion-item lines="none" class="close-fake" text-center (click)="dismiss()" > 
+
+   
+  <ion-button color="danger" slot="end" (click)="dismiss()" >
+    <strong>Close</strong> 
+  </ion-button>
+    
+</ion-item>
+
+<ion-slides  [options]="sliderOpt" zoom  style="border-radius: 100%;">
+  <ion-slide lines="none" style="border-radius: 100%;">
+    <div class="swiper-zoom-container" style="border-radius: 100%;">
+      <img src="{{imgurl}}" alt="No Image" height="320px" width="320px" style="height: 100%;width: 400px;border-radius: 100%;">
+    </div>
+  </ion-slide>
+</ion-slides>
+
+<ion-content fullscreen (click)="dismiss()">
+
+ 
+
+
+  
+</ion-content>

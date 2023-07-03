@@ -1,0 +1,133 @@
+hr {
+    border-top: 1px solid #dedede;
+}
+
+  ion-content {
+  
+    // overwrite inline styles & hiding the scrollbar
+    background-color: white;
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  } 
+
+  ion-radio
+  {
+    margin-left: 10px;
+    
+  }
+
+  
+  .chipone
+  {
+background: rgb(66, 56, 204);
+
+  }
+
+  .chiptwo
+  {
+background: rgb(211, 41, 41);
+
+  }
+  .chipthree
+  {
+background: rgb(217, 235, 62);
+
+  }
+  .chipfour
+  {
+background: rgb(54, 168, 54);
+
+  }
+
+
+  .chiplabel
+  {
+color: white;
+  }
+
+
+
+  .center {
+   
+    display: block;
+    margin-left: 60px;
+    margin-right: 30px;
+    border-radius: 100%;
+      }
+    
+      .flip-box {
+        background-color: transparent;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        
+      }
+      
+      /* This container is needed to position the front and back side */
+      .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-box .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+      
+      /* Position the front and back side */
+      .flip-box-front, .flip-box-back {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+      
+      /* Style the front side (fallback if image is missing) */
+      
+      
+      /* Style the back side */
+      .flip-box-back {
+       
+        transform: rotateY(180deg);
+      }
+      
+    
+      .ripple-parent {
+        position: relative;
+        overflow: hidden;
+      }
+    
+     /* img {
+        border: 5px solid rgb(116, 116, 116);
+      }*/
+
+      
+      
+            
+      .labelsize
+      {
+        font-size: large!important;
+      }
+
+
+  
+
+ion-fab-button
+{
+  height: 40px;
+  width: 40px;
+margin-left: 230px;
+margin-top: -20px;
+}
+
+

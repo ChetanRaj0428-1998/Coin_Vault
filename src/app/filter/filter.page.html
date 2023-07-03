@@ -1,0 +1,108 @@
+
+  <form   #f="ngForm" style="height: 0px;">
+
+  <ion-list class="center" lines="none" >
+  <ion-item><h2>{{title}}</h2></ion-item>
+  
+    <ion-grid>
+    <ion-row>
+    <ion-col  size="7" sizeSm="7" sizeMd="7" sizeLg="6" sizeXl="6" sizeXs="6">
+    <h3>Denomination</h3>
+    </ion-col>
+    <ion-col class="colpad">
+    <ion-select  interface="popover" value="1 Rupee"  [(ngModel)]="f_deno" name="f_deno">
+    <ion-select-option value="1 Paise">1 Paise</ion-select-option>
+    <ion-select-option value="2 Paise">2 Paise</ion-select-option>
+    <ion-select-option value="3 Paise">3 Paise</ion-select-option>
+    <ion-select-option value="5 Paise">5 Paise</ion-select-option>
+    <ion-select-option value="10 Paise">10 Paise</ion-select-option>
+    <ion-select-option value="20 Paise">20 Paise</ion-select-option>
+    <ion-select-option value="25 Paise">25 Paise</ion-select-option>
+    <ion-select-option value="50 Paise">50 Paise</ion-select-option>
+          <ion-select-option value="1 Rupee">1 Rupee</ion-select-option>
+          <ion-select-option value="2 Rupees">2 Rupees</ion-select-option>
+          <ion-select-option value="5 Rupees">5 Rupees</ion-select-option>
+          <ion-select-option value="10 Rupees">10 Rupees</ion-select-option>
+    
+              </ion-select>
+    </ion-col>
+    </ion-row>
+    </ion-grid>
+  
+  
+  <ion-grid>
+  <ion-row>
+  <ion-col  size="3" sizeSm="6" sizeMd="6" sizeLg="6" sizeXl="6" sizeXs="6">
+    <h3>Mint</h3>
+  </ion-col>
+  <ion-col class="colpad">
+  <ion-select  interface="popover" value="Diamond"  [(ngModel)]="f_mint" name="f_mint">
+        <ion-select-option value="Diamond">Bombay</ion-select-option>
+        <ion-select-option value="Star">Hyderabad</ion-select-option>
+        <ion-select-option value="Dot">Noida</ion-select-option>
+        <ion-select-option value="Blank">Calcutta</ion-select-option>
+  
+            </ion-select>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+  
+  <ion-grid>
+  <ion-row>
+  <ion-col  size="3" sizeSm="5" sizeMd="5" sizeLg="5" sizeXl="5" sizeXs="5">
+    <h3>Price</h3>
+  </ion-col>
+  <ion-col class="colpad">
+  <ion-select  interface="popover" value="HL"   [(ngModel)]="f_price" name="f_price">
+        <ion-select-option value="Price LH">Low to High  </ion-select-option>
+        <ion-select-option value="Price HL">High to Low </ion-select-option>
+        
+            </ion-select>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+  
+  
+  <ion-grid>
+  <ion-row>
+  <ion-col  size="3" sizeSm="6" sizeMd="5" sizeLg="5" sizeXl="5" sizeXs="5">
+    <h3>Year</h3>
+  </ion-col>
+  <ion-col class="colpad">
+  <ion-select  interface="popover" value="HL"  [(ngModel)]="f_year" name="f_year">
+        <ion-select-option value="Year LH">Low to High </ion-select-option>
+        <ion-select-option value="Year HL">High to Low</ion-select-option>
+        
+            </ion-select>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+  
+  <ion-grid>
+  <ion-row>
+  <ion-col >
+  <ion-button fill="outline"  expand="block" (click)="dismiss()">
+    Cancel
+  </ion-button>
+  </ion-col>
+  <ion-col>
+  <ion-button fill="outline"  expand="block" (click)="filterItem(f.value)" >
+    Ok
+  </ion-button>
+  </ion-col> 
+  </ion-row>
+  </ion-grid>
+  
+  
+  </ion-list>
+  
+  </form>
+  
+  <ion-content fullscreen (click)="dismiss()" class="transparent-div">
+  
+   
+  
+  
+    
+  </ion-content>
+  
