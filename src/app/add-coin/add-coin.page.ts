@@ -90,17 +90,22 @@ coinref= {} as Coin
 
 
 
-  setPhotoOption(x)
+  setPhotoOption(value:number)
   {
-if(x==1)
+//    console.log("option: Inside", value)
+
+if(value==1)
 {
   this.options=this.cameraoptions;
+  console.log("option: Camera")
 }
-if(x==2)
+if(value==2)
 {
   this.options=this.galleryoptions;
+  console.log("option: Gallery")
 }
-  }
+
+}
 
   async SubmitForm(x)
   {
