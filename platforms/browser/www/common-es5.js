@@ -7,15 +7,15 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common"], {
     /***/
-    "./node_modules/@ionic/core/dist/esm/button-active-5da929d4.js":
+    "./node_modules/@ionic/core/dist/esm/button-active-d4bd4f74.js":
     /*!*********************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/button-active-5da929d4.js ***!
+      !*** ./node_modules/@ionic/core/dist/esm/button-active-d4bd4f74.js ***!
       \*********************************************************************/
 
     /*! exports provided: c */
 
     /***/
-    function node_modulesIonicCoreDistEsmButtonActive5da929d4Js(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesIonicCoreDistEsmButtonActiveD4bd4f74Js(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -28,21 +28,21 @@
       /* harmony import */
 
 
-      var _index_92848855_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./index-92848855.js */
-      "./node_modules/@ionic/core/dist/esm/index-92848855.js");
+      var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./index-7a8b7a1c.js */
+      "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
       /* harmony import */
 
 
-      var _index_eea61379_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! ./index-eea61379.js */
-      "./node_modules/@ionic/core/dist/esm/index-eea61379.js");
+      var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./haptic-27b3f981.js */
+      "./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js");
       /* harmony import */
 
 
-      var _haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./haptic-7b8ba70a.js */
-      "./node_modules/@ionic/core/dist/esm/haptic-7b8ba70a.js");
+      var _index_34cb2743_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./index-34cb2743.js */
+      "./node_modules/@ionic/core/dist/esm/index-34cb2743.js");
 
       var createButtonActiveGesture = function createButtonActiveGesture(el, isButton) {
         var currentTouchedButton;
@@ -74,7 +74,7 @@
           }
 
           var buttonToModify = currentTouchedButton;
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
             return buttonToModify.classList.add('ion-activated');
           });
           hapticFeedbackFn();
@@ -88,7 +88,7 @@
           }
 
           var buttonToModify = currentTouchedButton;
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
             return buttonToModify.classList.remove('ion-activated');
           });
           /**
@@ -107,19 +107,19 @@
           currentTouchedButton = undefined;
         };
 
-        return Object(_index_eea61379_js__WEBPACK_IMPORTED_MODULE_1__["createGesture"])({
+        return Object(_index_34cb2743_js__WEBPACK_IMPORTED_MODULE_2__["createGesture"])({
           el: el,
           gestureName: 'buttonActiveDrag',
           threshold: 0,
           onStart: function onStart(ev) {
-            return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["a"]);
+            return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["a"]);
           },
           onMove: function onMove(ev) {
-            return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["b"]);
+            return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["b"]);
           },
           onEnd: function onEnd() {
             clearActiveButton(true);
-            Object(_haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["h"])();
+            Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["h"])();
             initialTouchedButton = undefined;
           }
         });
@@ -129,15 +129,15 @@
     },
 
     /***/
-    "./node_modules/@ionic/core/dist/esm/framework-delegate-d1eb6504.js":
+    "./node_modules/@ionic/core/dist/esm/framework-delegate-94e770cc.js":
     /*!**************************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-d1eb6504.js ***!
+      !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-94e770cc.js ***!
       \**************************************************************************/
 
     /*! exports provided: a, d */
 
     /***/
-    function node_modulesIonicCoreDistEsmFrameworkDelegateD1eb6504Js(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesIonicCoreDistEsmFrameworkDelegate94e770ccJs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -153,6 +153,12 @@
       __webpack_require__.d(__webpack_exports__, "d", function () {
         return detachComponent;
       });
+      /* harmony import */
+
+
+      var _helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./helpers-1457892a.js */
+      "./node_modules/@ionic/core/dist/esm/helpers-1457892a.js");
 
       var attachComponent = /*#__PURE__*/function () {
         var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(delegate, container, component, cssClasses, componentProps) {
@@ -190,19 +196,15 @@
                   }
 
                   container.appendChild(el);
+                  _context.next = 10;
+                  return new Promise(function (resolve) {
+                    return Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_0__["c"])(el, resolve);
+                  });
 
-                  if (!el.componentOnReady) {
-                    _context.next = 11;
-                    break;
-                  }
-
-                  _context.next = 11;
-                  return el.componentOnReady();
-
-                case 11:
+                case 10:
                   return _context.abrupt("return", el);
 
-                case 12:
+                case 11:
                 case "end":
                   return _context.stop();
               }
@@ -232,15 +234,15 @@
     },
 
     /***/
-    "./node_modules/@ionic/core/dist/esm/haptic-7b8ba70a.js":
+    "./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js":
     /*!**************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/haptic-7b8ba70a.js ***!
+      !*** ./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js ***!
       \**************************************************************/
 
     /*! exports provided: a, b, c, d, h */
 
     /***/
-    function node_modulesIonicCoreDistEsmHaptic7b8ba70aJs(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesIonicCoreDistEsmHaptic27b3f981Js(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -406,15 +408,15 @@
     },
 
     /***/
-    "./node_modules/@ionic/core/dist/esm/spinner-configs-c78e170e.js":
+    "./node_modules/@ionic/core/dist/esm/spinner-configs-cd7845af.js":
     /*!***********************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/spinner-configs-c78e170e.js ***!
+      !*** ./node_modules/@ionic/core/dist/esm/spinner-configs-cd7845af.js ***!
       \***********************************************************************/
 
     /*! exports provided: S */
 
     /***/
-    function node_modulesIonicCoreDistEsmSpinnerConfigsC78e170eJs(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesIonicCoreDistEsmSpinnerConfigsCd7845afJs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -537,15 +539,15 @@
     },
 
     /***/
-    "./node_modules/@ionic/core/dist/esm/theme-5641d27f.js":
+    "./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js":
     /*!*************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/theme-5641d27f.js ***!
+      !*** ./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js ***!
       \*************************************************************/
 
     /*! exports provided: c, g, h, o */
 
     /***/
-    function node_modulesIonicCoreDistEsmTheme5641d27fJs(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesIonicCoreDistEsmThemeFf3fc52fJs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);

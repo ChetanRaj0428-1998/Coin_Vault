@@ -46,57 +46,57 @@
       /* harmony import */
 
 
-      var _index_92848855_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./index-92848855.js */
-      "./node_modules/@ionic/core/dist/esm/index-92848855.js");
+      var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./index-7a8b7a1c.js */
+      "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
       /* harmony import */
 
 
-      var _ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! ./ionic-global-23e7365a.js */
-      "./node_modules/@ionic/core/dist/esm/ionic-global-23e7365a.js");
+      var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./ionic-global-63a97a32.js */
+      "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
       /* harmony import */
 
 
-      var _helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./helpers-5c745fbd.js */
-      "./node_modules/@ionic/core/dist/esm/helpers-5c745fbd.js");
+      var _cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./cubic-bezier-eea9a7a9.js */
+      "./node_modules/@ionic/core/dist/esm/cubic-bezier-eea9a7a9.js");
       /* harmony import */
 
 
-      var _animation_a635a2fc_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! ./animation-a635a2fc.js */
-      "./node_modules/@ionic/core/dist/esm/animation-a635a2fc.js");
+      var _gesture_controller_31cb6bb9_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ./gesture-controller-31cb6bb9.js */
+      "./node_modules/@ionic/core/dist/esm/gesture-controller-31cb6bb9.js");
       /* harmony import */
 
 
-      var _cubic_bezier_685f606a_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! ./cubic-bezier-685f606a.js */
-      "./node_modules/@ionic/core/dist/esm/cubic-bezier-685f606a.js");
+      var _helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ./helpers-1457892a.js */
+      "./node_modules/@ionic/core/dist/esm/helpers-1457892a.js");
       /* harmony import */
 
 
-      var _gesture_controller_89173521_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! ./gesture-controller-89173521.js */
-      "./node_modules/@ionic/core/dist/esm/gesture-controller-89173521.js");
+      var _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ./index-1e16c550.js */
+      "./node_modules/@ionic/core/dist/esm/index-1e16c550.js");
       /* harmony import */
 
 
-      var _hardware_back_button_7b6ede21_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! ./hardware-back-button-7b6ede21.js */
-      "./node_modules/@ionic/core/dist/esm/hardware-back-button-7b6ede21.js");
+      var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ./theme-ff3fc52f.js */
+      "./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js");
       /* harmony import */
 
 
-      var _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ./index-52d51fad.js */
-      "./node_modules/@ionic/core/dist/esm/index-52d51fad.js");
+      var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! ./hardware-back-button-4a6b37fb.js */
+      "./node_modules/@ionic/core/dist/esm/hardware-back-button-4a6b37fb.js");
       /* harmony import */
 
 
-      var _theme_5641d27f_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! ./theme-5641d27f.js */
-      "./node_modules/@ionic/core/dist/esm/theme-5641d27f.js");
+      var _animation_822d986b_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! ./animation-822d986b.js */
+      "./node_modules/@ionic/core/dist/esm/animation-822d986b.js");
 
       var menuIosCss = ":host{--width:304px;--min-width:auto;--max-width:auto;--height:100%;--min-height:auto;--max-height:auto;--background:var(--ion-background-color, #fff);left:0;right:0;top:0;bottom:0;display:none;position:absolute;contain:strict}:host(.show-menu){display:block}.menu-inner{left:0;right:auto;top:0;bottom:0;-webkit-transform:translate3d(-9999px,  0,  0);transform:translate3d(-9999px,  0,  0);display:-ms-flexbox;display:flex;position:absolute;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:justify;justify-content:space-between;width:var(--width);min-width:var(--min-width);max-width:var(--max-width);height:var(--height);min-height:var(--min-height);max-height:var(--max-height);background:var(--background);contain:strict}[dir=rtl] .menu-inner,:host-context([dir=rtl]) .menu-inner{left:unset;right:unset;left:auto;right:0}[dir=rtl] .menu-inner,:host-context([dir=rtl]) .menu-inner{-webkit-transform:translate3d(calc(-1 * -9999px),  0,  0);transform:translate3d(calc(-1 * -9999px),  0,  0)}:host(.menu-side-start) .menu-inner{--ion-safe-area-right:0px;right:auto;left:0}:host(.menu-side-end) .menu-inner{--ion-safe-area-left:0px;right:0;left:auto;}ion-backdrop{display:none;opacity:0.01;z-index:-1}@media (max-width: 340px){.menu-inner{--width:264px}}:host(.menu-type-reveal){z-index:0}:host(.menu-type-reveal.show-menu) .menu-inner{-webkit-transform:translate3d(0,  0,  0);transform:translate3d(0,  0,  0)}:host(.menu-type-overlay){z-index:1000}:host(.menu-type-overlay) .show-backdrop{display:block;cursor:pointer}:host(.menu-pane-visible){width:var(--width);min-width:var(--min-width);max-width:var(--max-width)}:host(.menu-pane-visible) .menu-inner{left:0;right:0;width:auto;-webkit-transform:none !important;transform:none !important;-webkit-box-shadow:none !important;box-shadow:none !important}:host(.menu-pane-visible) ion-backdrop{display:hidden !important;}:host(.menu-type-push){z-index:1000}:host(.menu-type-push) .show-backdrop{display:block}";
       var menuMdCss = ":host{--width:304px;--min-width:auto;--max-width:auto;--height:100%;--min-height:auto;--max-height:auto;--background:var(--ion-background-color, #fff);left:0;right:0;top:0;bottom:0;display:none;position:absolute;contain:strict}:host(.show-menu){display:block}.menu-inner{left:0;right:auto;top:0;bottom:0;-webkit-transform:translate3d(-9999px,  0,  0);transform:translate3d(-9999px,  0,  0);display:-ms-flexbox;display:flex;position:absolute;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:justify;justify-content:space-between;width:var(--width);min-width:var(--min-width);max-width:var(--max-width);height:var(--height);min-height:var(--min-height);max-height:var(--max-height);background:var(--background);contain:strict}[dir=rtl] .menu-inner,:host-context([dir=rtl]) .menu-inner{left:unset;right:unset;left:auto;right:0}[dir=rtl] .menu-inner,:host-context([dir=rtl]) .menu-inner{-webkit-transform:translate3d(calc(-1 * -9999px),  0,  0);transform:translate3d(calc(-1 * -9999px),  0,  0)}:host(.menu-side-start) .menu-inner{--ion-safe-area-right:0px;right:auto;left:0}:host(.menu-side-end) .menu-inner{--ion-safe-area-left:0px;right:0;left:auto;}ion-backdrop{display:none;opacity:0.01;z-index:-1}@media (max-width: 340px){.menu-inner{--width:264px}}:host(.menu-type-reveal){z-index:0}:host(.menu-type-reveal.show-menu) .menu-inner{-webkit-transform:translate3d(0,  0,  0);transform:translate3d(0,  0,  0)}:host(.menu-type-overlay){z-index:1000}:host(.menu-type-overlay) .show-backdrop{display:block;cursor:pointer}:host(.menu-pane-visible){width:var(--width);min-width:var(--min-width);max-width:var(--max-width)}:host(.menu-pane-visible) .menu-inner{left:0;right:0;width:auto;-webkit-transform:none !important;transform:none !important;-webkit-box-shadow:none !important;box-shadow:none !important}:host(.menu-pane-visible) ion-backdrop{display:hidden !important;}:host(.menu-type-overlay) .menu-inner{-webkit-box-shadow:4px 0px 16px rgba(0, 0, 0, 0.18);box-shadow:4px 0px 16px rgba(0, 0, 0, 0.18)}";
@@ -104,23 +104,32 @@
       var mdEasing = 'cubic-bezier(0.0,0.0,0.2,1)';
       var iosEasingReverse = 'cubic-bezier(1, 0, 0.68, 0.28)';
       var mdEasingReverse = 'cubic-bezier(0.4, 0, 0.6, 1)';
+      var focusableQueryString = '[tabindex]:not([tabindex^="-"]), input:not([type=hidden]):not([tabindex^="-"]), textarea:not([tabindex^="-"]), button:not([tabindex^="-"]), select:not([tabindex^="-"]), .ion-focusable:not([tabindex^="-"])';
 
       var Menu = /*#__PURE__*/function () {
         function Menu(hostRef) {
+          var _this = this;
+
           _classCallCheck(this, Menu);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-          this.ionWillOpen = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionWillOpen", 7);
-          this.ionWillClose = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionWillClose", 7);
-          this.ionDidOpen = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionDidOpen", 7);
-          this.ionDidClose = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionDidClose", 7);
-          this.ionMenuChange = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionMenuChange", 7);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          this.ionWillOpen = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionWillOpen", 7);
+          this.ionWillClose = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionWillClose", 7);
+          this.ionDidOpen = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionDidOpen", 7);
+          this.ionDidClose = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionDidClose", 7);
+          this.ionMenuChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionMenuChange", 7);
           this.lastOnEnd = 0;
-          this.blocker = _gesture_controller_89173521_js__WEBPACK_IMPORTED_MODULE_5__["G"].createBlocker({
+          this.blocker = _gesture_controller_31cb6bb9_js__WEBPACK_IMPORTED_MODULE_3__["G"].createBlocker({
             disableScroll: true
           });
           this.isAnimating = false;
           this._isOpen = false;
+          this.inheritedAttributes = {};
+
+          this.handleFocus = function (ev) {
+            return _this.trapKeyboardFocus(ev, document);
+          };
+
           this.isPaneVisible = false;
           this.isEndSide = false;
           /**
@@ -179,7 +188,7 @@
         }, {
           key: "sideChanged",
           value: function sideChanged() {
-            this.isEndSide = Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["i"])(this.side);
+            this.isEndSide = Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["n"])(this.side);
           }
         }, {
           key: "swipeGestureChanged",
@@ -190,7 +199,7 @@
           key: "connectedCallback",
           value: function () {
             var _connectedCallback = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              var _this = this;
+              var _this2 = this;
 
               var el, parent, content;
               return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -198,7 +207,7 @@
                   switch (_context.prev = _context.next) {
                     case 0:
                       if (this.type === undefined) {
-                        this.type = _ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('menuType', 'overlay');
+                        this.type = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('menuType', 'overlay');
                       }
 
                       el = this.el;
@@ -226,12 +235,12 @@
                       this.typeChanged(this.type, undefined);
                       this.sideChanged(); // register this menu with the app's menu controller
 
-                      _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"]._register(this);
+                      _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"]._register(this);
 
                       _context.next = 15;
                       return Promise.resolve().then(__webpack_require__.bind(null,
-                      /*! ./index-eea61379.js */
-                      "./node_modules/@ionic/core/dist/esm/index-eea61379.js"));
+                      /*! ./index-34cb2743.js */
+                      "./node_modules/@ionic/core/dist/esm/index-34cb2743.js"));
 
                     case 15:
                       this.gesture = _context.sent.createGesture({
@@ -241,19 +250,19 @@
                         threshold: 10,
                         blurOnStart: true,
                         canStart: function canStart(ev) {
-                          return _this.canStart(ev);
+                          return _this2.canStart(ev);
                         },
                         onWillStart: function onWillStart() {
-                          return _this.onWillStart();
+                          return _this2.onWillStart();
                         },
                         onStart: function onStart() {
-                          return _this.onStart();
+                          return _this2.onStart();
                         },
                         onMove: function onMove(ev) {
-                          return _this.onMove(ev);
+                          return _this2.onMove(ev);
                         },
                         onEnd: function onEnd(ev) {
-                          return _this.onEnd(ev);
+                          return _this2.onEnd(ev);
                         }
                       });
                       this.updateState();
@@ -272,6 +281,11 @@
 
             return connectedCallback;
           }()
+        }, {
+          key: "componentWillLoad",
+          value: function componentWillLoad() {
+            this.inheritedAttributes = Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["i"])(this.el);
+          }
         }, {
           key: "componentDidLoad",
           value: function () {
@@ -305,7 +319,7 @@
           value: function disconnectedCallback() {
             this.blocker.destroy();
 
-            _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"]._unregister(this);
+            _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"]._unregister(this);
 
             if (this.animation) {
               this.animation.destroy();
@@ -336,6 +350,13 @@
                 ev.stopPropagation();
                 this.close();
               }
+            }
+          }
+        }, {
+          key: "onKeydown",
+          value: function onKeydown(ev) {
+            if (ev.key === 'Escape') {
+              this.close();
             }
           }
           /**
@@ -401,7 +422,73 @@
           key: "setOpen",
           value: function setOpen(shouldOpen) {
             var animated = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-            return _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"]._setOpen(this, shouldOpen, animated);
+            return _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"]._setOpen(this, shouldOpen, animated);
+          }
+        }, {
+          key: "focusFirstDescendant",
+          value: function focusFirstDescendant() {
+            var el = this.el;
+            var firstInput = el.querySelector(focusableQueryString);
+
+            if (firstInput) {
+              firstInput.focus();
+            } else {
+              el.focus();
+            }
+          }
+        }, {
+          key: "focusLastDescendant",
+          value: function focusLastDescendant() {
+            var el = this.el;
+            var inputs = Array.from(el.querySelectorAll(focusableQueryString));
+            var lastInput = inputs.length > 0 ? inputs[inputs.length - 1] : null;
+
+            if (lastInput) {
+              lastInput.focus();
+            } else {
+              el.focus();
+            }
+          }
+        }, {
+          key: "trapKeyboardFocus",
+          value: function trapKeyboardFocus(ev, doc) {
+            var target = ev.target;
+
+            if (!target) {
+              return;
+            }
+            /**
+             * If the target is inside the menu contents, let the browser
+             * focus as normal and keep a log of the last focused element.
+             */
+
+
+            if (this.el.contains(target)) {
+              this.lastFocus = target;
+            } else {
+              /**
+               * Otherwise, we are about to have focus go out of the menu.
+               * Wrap the focus to either the first or last element.
+               */
+
+              /**
+               * Once we call `focusFirstDescendant`, another focus event
+               * will fire, which will cause `lastFocus` to be updated
+               * before we can run the code after that. We cache the value
+               * here to avoid that.
+               */
+              this.focusFirstDescendant();
+              /**
+               * If the cached last focused element is the same as the now-
+               * active element, that means the user was on the first element
+               * already and pressed Shift + Tab, so we need to wrap to the
+               * last descendant.
+               */
+
+              if (this.lastFocus === doc.activeElement) {
+                this.focusLastDescendant();
+              }
+            }
           }
         }, {
           key: "_setOpen",
@@ -479,12 +566,12 @@
 
 
                       _context4.next = 7;
-                      return _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"]._createAnimation(this.type, this);
+                      return _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"]._createAnimation(this.type, this);
 
                     case 7:
                       this.animation = _context4.sent;
 
-                      if (!_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('animated', true)) {
+                      if (!_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('animated', true)) {
                         this.animation.duration(0);
                       }
 
@@ -514,7 +601,7 @@
                   switch (_context5.prev = _context5.next) {
                     case 0:
                       isReversed = !shouldOpen;
-                      mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+                      mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
                       easing = mode === 'ios' ? iosEasing : mdEasing;
                       easingReverse = mode === 'ios' ? iosEasingReverse : mdEasingReverse;
                       ani = this.animation.direction(isReversed ? 'reverse' : 'normal').easing(isReversed ? easingReverse : easing).onFinish(function () {
@@ -576,7 +663,7 @@
 
             if (this._isOpen) {
               return true; // TODO error
-            } else if (_index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"]._getOpenSync()) {
+            } else if (_index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"]._getOpenSync()) {
               return false;
             }
 
@@ -592,7 +679,7 @@
           key: "onStart",
           value: function onStart() {
             if (!this.isAnimating || !this.animation) {
-              Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(false, 'isAnimating has to be true');
+              Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["m"])(false, 'isAnimating has to be true');
               return;
             } // the cloned animation should not use an easing curve during seek
 
@@ -603,7 +690,7 @@
           key: "onMove",
           value: function onMove(detail) {
             if (!this.isAnimating || !this.animation) {
-              Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(false, 'isAnimating has to be true');
+              Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["m"])(false, 'isAnimating has to be true');
               return;
             }
 
@@ -614,10 +701,10 @@
         }, {
           key: "onEnd",
           value: function onEnd(detail) {
-            var _this2 = this;
+            var _this3 = this;
 
             if (!this.isAnimating || !this.animation) {
-              Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(false, 'isAnimating has to be true');
+              Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["m"])(false, 'isAnimating has to be true');
               return;
             }
 
@@ -657,10 +744,10 @@
              * in terms of a linear curve.
              */
 
-            newStepValue += Object(_cubic_bezier_685f606a_js__WEBPACK_IMPORTED_MODULE_4__["g"])([0, 0], [0.4, 0], [0.6, 1], [1, 1], Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["c"])(0, adjustedStepValue, 0.9999))[0] || 0;
+            newStepValue += Object(_cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_2__["g"])([0, 0], [0.4, 0], [0.6, 1], [1, 1], Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["k"])(0, adjustedStepValue, 0.9999))[0] || 0;
             var playTo = this._isOpen ? !shouldComplete : shouldComplete;
             this.animation.easing('cubic-bezier(0.4, 0.0, 0.6, 1)').onFinish(function () {
-              return _this2.afterAnimation(shouldOpen);
+              return _this3.afterAnimation(shouldOpen);
             }, {
               oneTimeCallback: true
             }).progressEnd(playTo ? 1 : 0, this._isOpen ? 1 - newStepValue : newStepValue, 300);
@@ -668,10 +755,20 @@
         }, {
           key: "beforeAnimation",
           value: function beforeAnimation(shouldOpen) {
-            Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(!this.isAnimating, '_before() should not be called while animating'); // this places the menu into the correct location before it animates in
+            Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["m"])(!this.isAnimating, '_before() should not be called while animating'); // this places the menu into the correct location before it animates in
             // this css class doesn't actually kick off any animations
 
             this.el.classList.add(SHOW_MENU);
+            /**
+             * We add a tabindex here so that focus trapping
+             * still works even if the menu does not have
+             * any focusable elements slotted inside. The
+             * focus trapping utility will fallback to focusing
+             * the menu so focus does not leave when the menu
+             * is open.
+             */
+
+            this.el.setAttribute('tabindex', '0');
 
             if (this.backdropEl) {
               this.backdropEl.classList.add(SHOW_BACKDROP);
@@ -689,7 +786,7 @@
         }, {
           key: "afterAnimation",
           value: function afterAnimation(isOpen) {
-            Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(this.isAnimating, '_before() should be called while animating'); // keep opening/closing the menu disabled for a touch more yet
+            Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["m"])(this.isAnimating, '_before() should be called while animating'); // keep opening/closing the menu disabled for a touch more yet
             // only add listeners/css if it's enabled and isOpen
             // and only remove listeners/css if it's not open
             // emit opened/closed events
@@ -702,19 +799,49 @@
             }
 
             if (isOpen) {
-              // add css class
+              // add css class and hide content behind menu from screen readers
               if (this.contentEl) {
                 this.contentEl.classList.add(MENU_CONTENT_OPEN);
+                /**
+                 * When the menu is open and overlaying the main
+                 * content, the main content should not be announced
+                 * by the screenreader as the menu is the main
+                 * focus. This is useful with screenreaders that have
+                 * "read from top" gestures that read the entire
+                 * page from top to bottom when activated.
+                 */
+
+                this.contentEl.setAttribute('aria-hidden', 'true');
               } // emit open event
 
 
-              this.ionDidOpen.emit();
+              this.ionDidOpen.emit(); // focus menu content for screen readers
+
+              if (this.menuInnerEl) {
+                this.focusFirstDescendant();
+              } // setup focus trapping
+
+
+              document.addEventListener('focus', this.handleFocus, true);
             } else {
-              // remove css classes
+              // remove css classes and unhide content from screen readers
               this.el.classList.remove(SHOW_MENU);
+              /**
+               * Remove tabindex from the menu component
+               * so that is cannot be tabbed to.
+               */
+
+              this.el.removeAttribute('tabindex');
 
               if (this.contentEl) {
                 this.contentEl.classList.remove(MENU_CONTENT_OPEN);
+                /**
+                 * Remove aria-hidden so screen readers
+                 * can announce the main content again
+                 * now that the menu is not the main focus.
+                 */
+
+                this.contentEl.removeAttribute('aria-hidden');
               }
 
               if (this.backdropEl) {
@@ -726,7 +853,9 @@
               } // emit close event
 
 
-              this.ionDidClose.emit();
+              this.ionDidClose.emit(); // undo focus trapping so multiple menus don't collide
+
+              document.removeEventListener('focus', this.handleFocus, true);
             }
           }
         }, {
@@ -745,15 +874,15 @@
             }
 
             if (!this.disabled) {
-              _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"]._setActiveMenu(this);
+              _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"]._setActiveMenu(this);
             }
 
-            Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(!this.isAnimating, 'can not be animating');
+            Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["m"])(!this.isAnimating, 'can not be animating');
           }
         }, {
           key: "forceClosing",
           value: function forceClosing() {
-            Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["b"])(this._isOpen, 'menu cannot be closed');
+            Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["m"])(this._isOpen, 'menu cannot be closed');
             this.isAnimating = true;
             var ani = this.animation.direction('reverse');
             ani.play({
@@ -765,25 +894,27 @@
           key: "render",
           value: function render() {
             var _class,
-                _this3 = this;
+                _this4 = this;
 
             var isEndSide = this.isEndSide,
                 type = this.type,
                 disabled = this.disabled,
-                isPaneVisible = this.isPaneVisible;
-            var mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+                isPaneVisible = this.isPaneVisible,
+                inheritedAttributes = this.inheritedAttributes;
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               role: "navigation",
+              "aria-label": inheritedAttributes['aria-label'] || 'menu',
               "class": (_class = {}, _defineProperty(_class, mode, true), _defineProperty(_class, "menu-type-".concat(type), true), _defineProperty(_class, 'menu-enabled', !disabled), _defineProperty(_class, 'menu-side-end', isEndSide), _defineProperty(_class, 'menu-side-start', !isEndSide), _defineProperty(_class, 'menu-pane-visible', isPaneVisible), _class)
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
               "class": "menu-inner",
               part: "container",
               ref: function ref(el) {
-                return _this3.menuInnerEl = el;
+                return _this4.menuInnerEl = el;
               }
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", {
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", {
               ref: function ref(el) {
-                return _this3.backdropEl = el;
+                return _this4.backdropEl = el;
               },
               "class": "menu-backdrop",
               tappable: false,
@@ -794,7 +925,7 @@
         }, {
           key: "el",
           get: function get() {
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
           }
         }], [{
           key: "watchers",
@@ -839,7 +970,7 @@
               switch (_context6.prev = _context6.next) {
                 case 0:
                   _context6.next = 2;
-                  return _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"].get(menu);
+                  return _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"].get(menu);
 
                 case 2:
                   menuEl = _context6.sent;
@@ -877,11 +1008,12 @@
 
       var MenuButton = /*#__PURE__*/function () {
         function MenuButton(hostRef) {
-          var _this4 = this;
+          var _this5 = this;
 
           _classCallCheck(this, MenuButton);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          this.inheritedAttributes = {};
           this.visible = false;
           /**
            * If `true`, the user cannot interact with the menu button.
@@ -903,7 +1035,7 @@
               while (1) {
                 switch (_context7.prev = _context7.next) {
                   case 0:
-                    return _context7.abrupt("return", _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"].toggle(_this4.menu));
+                    return _context7.abrupt("return", _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"].toggle(_this5.menu));
 
                   case 1:
                   case "end":
@@ -915,6 +1047,11 @@
         }
 
         _createClass(MenuButton, [{
+          key: "componentWillLoad",
+          value: function componentWillLoad() {
+            this.inheritedAttributes = Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_4__["i"])(this.el);
+          }
+        }, {
           key: "componentDidLoad",
           value: function componentDidLoad() {
             this.visibilityChanged();
@@ -953,41 +1090,43 @@
             var _Object;
 
             var color = this.color,
-                disabled = this.disabled;
-            var mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+                disabled = this.disabled,
+                inheritedAttributes = this.inheritedAttributes;
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
 
-            var menuIcon = _ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('menuIcon', mode === 'ios' ? 'menu-outline' : 'menu-sharp');
+            var menuIcon = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('menuIcon', mode === 'ios' ? 'menu-outline' : 'menu-sharp');
 
             var hidden = this.autoHide && !this.visible;
             var attrs = {
               type: this.type
             };
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            var ariaLabel = inheritedAttributes['aria-label'] || 'menu';
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               onClick: this.onClick,
               "aria-disabled": disabled ? 'true' : null,
               "aria-hidden": hidden ? 'true' : null,
-              "class": Object(_theme_5641d27f_js__WEBPACK_IMPORTED_MODULE_8__["c"])(color, (_Object = {}, _defineProperty(_Object, mode, true), _defineProperty(_Object, 'button', true), _defineProperty(_Object, 'menu-button-hidden', hidden), _defineProperty(_Object, 'menu-button-disabled', disabled), _defineProperty(_Object, 'in-toolbar', Object(_theme_5641d27f_js__WEBPACK_IMPORTED_MODULE_8__["h"])('ion-toolbar', this.el)), _defineProperty(_Object, 'in-toolbar-color', Object(_theme_5641d27f_js__WEBPACK_IMPORTED_MODULE_8__["h"])('ion-toolbar[color]', this.el)), _defineProperty(_Object, 'ion-activatable', true), _defineProperty(_Object, 'ion-focusable', true), _Object))
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", Object.assign({}, attrs, {
+              "class": Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__["c"])(color, (_Object = {}, _defineProperty(_Object, mode, true), _defineProperty(_Object, 'button', true), _defineProperty(_Object, 'menu-button-hidden', hidden), _defineProperty(_Object, 'menu-button-disabled', disabled), _defineProperty(_Object, 'in-toolbar', Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__["h"])('ion-toolbar', this.el)), _defineProperty(_Object, 'in-toolbar-color', Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_6__["h"])('ion-toolbar[color]', this.el)), _defineProperty(_Object, 'ion-activatable', true), _defineProperty(_Object, 'ion-focusable', true), _Object))
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", Object.assign({}, attrs, {
               disabled: disabled,
               "class": "button-native",
               part: "native",
-              "aria-label": "menu"
-            }), Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
+              "aria-label": ariaLabel
+            }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
               "class": "button-inner"
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
               part: "icon",
               icon: menuIcon,
               mode: mode,
               lazy: false,
               "aria-hidden": "true"
-            }))), mode === 'md' && Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
+            }))), mode === 'md' && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
               type: "unbounded"
             })));
           }
         }, {
           key: "el",
           get: function get() {
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
           }
         }]);
 
@@ -1002,11 +1141,11 @@
 
       var MenuToggle = /*#__PURE__*/function () {
         function MenuToggle(hostRef) {
-          var _this5 = this;
+          var _this6 = this;
 
           _classCallCheck(this, MenuToggle);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
           this.visible = false;
           /**
            * Automatically hides the content when the corresponding menu is not active.
@@ -1018,7 +1157,7 @@
           this.autoHide = true;
 
           this.onClick = function () {
-            return _index_52d51fad_js__WEBPACK_IMPORTED_MODULE_7__["m"].toggle(_this5.menu);
+            return _index_1e16c550_js__WEBPACK_IMPORTED_MODULE_5__["m"].toggle(_this6.menu);
           };
         }
 
@@ -1060,13 +1199,13 @@
           value: function render() {
             var _class2;
 
-            var mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
             var hidden = this.autoHide && !this.visible;
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               onClick: this.onClick,
               "aria-hidden": hidden ? 'true' : null,
               "class": (_class2 = {}, _defineProperty(_class2, mode, true), _defineProperty(_class2, 'menu-toggle-hidden', hidden), _class2)
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null));
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null));
           }
         }]);
 

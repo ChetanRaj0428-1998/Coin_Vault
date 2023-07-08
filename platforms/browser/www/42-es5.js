@@ -38,9 +38,15 @@
       /* harmony import */
 
 
-      var _index_92848855_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./index-92848855.js */
-      "./node_modules/@ionic/core/dist/esm/index-92848855.js");
+      var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./index-7a8b7a1c.js */
+      "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
+      /* harmony import */
+
+
+      var _helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./helpers-1457892a.js */
+      "./node_modules/@ionic/core/dist/esm/helpers-1457892a.js");
 
       var CELL_TYPE_ITEM = 'item';
       var CELL_TYPE_HEADER = 'header';
@@ -377,7 +383,7 @@
 
           _classCallCheck(this, VirtualScroll);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
           this.range = {
             offset: 0,
             length: 0
@@ -437,6 +443,11 @@
           value: function itemsChanged() {
             this.calcCells();
             this.updateVirtualScroll();
+          }
+        }, {
+          key: "componentWillLoad",
+          value: function componentWillLoad() {
+            console.warn("[Deprecation Warning]: ion-virtual-scroll has been deprecated and will be removed in Ionic Framework v7.0. See https://ionicframework.com/docs/angular/virtual-scroll for migration steps.");
           }
         }, {
           key: "connectedCallback",
@@ -609,8 +620,8 @@
             } // schedule DOM operations into the stencil queue
 
 
-            Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["f"])(this.readVS.bind(this));
-            Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this.writeVS.bind(this));
+            Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(this.readVS.bind(this));
+            Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this.writeVS.bind(this));
           }
         }, {
           key: "readVS",
@@ -661,7 +672,7 @@
             } else if (this.domRender) {
               this.domRender(this.virtualDom);
             } else if (this.renderItem) {
-              Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
+              Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
             }
           }
         }, {
@@ -678,8 +689,8 @@
               }
             };
 
-            if (node && node.componentOnReady) {
-              node.componentOnReady().then(update);
+            if (node) {
+              Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_1__["c"])(node, update);
             } else {
               update();
             }
@@ -797,11 +808,11 @@
           value: function render() {
             var _this5 = this;
 
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               style: {
                 height: "".concat(this.totalHeight, "px")
               }
-            }, this.renderItem && Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(VirtualProxy, {
+            }, this.renderItem && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(VirtualProxy, {
               dom: this.virtualDom
             }, this.virtualDom.map(function (node) {
               return _this5.renderVirtualNode(node);
@@ -810,7 +821,7 @@
         }, {
           key: "el",
           get: function get() {
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
           }
         }], [{
           key: "watchers",

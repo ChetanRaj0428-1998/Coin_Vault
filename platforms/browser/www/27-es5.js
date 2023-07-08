@@ -40,21 +40,21 @@
       /* harmony import */
 
 
-      var _index_92848855_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./index-92848855.js */
-      "./node_modules/@ionic/core/dist/esm/index-92848855.js");
+      var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./index-7a8b7a1c.js */
+      "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
       /* harmony import */
 
 
-      var _ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! ./ionic-global-23e7365a.js */
-      "./node_modules/@ionic/core/dist/esm/ionic-global-23e7365a.js");
+      var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./ionic-global-63a97a32.js */
+      "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
       /* harmony import */
 
 
-      var _haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./haptic-7b8ba70a.js */
-      "./node_modules/@ionic/core/dist/esm/haptic-7b8ba70a.js");
+      var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./haptic-27b3f981.js */
+      "./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js");
 
       var reorderIosCss = ":host([slot]){display:none;line-height:0;z-index:100}.reorder-icon{display:block;font-size:22px}.reorder-icon{font-size:34px;opacity:0.4}";
       var reorderMdCss = ":host([slot]){display:none;line-height:0;z-index:100}.reorder-icon{display:block;font-size:22px}.reorder-icon{font-size:31px;opacity:0.3}";
@@ -63,7 +63,7 @@
         function Reorder(hostRef) {
           _classCallCheck(this, Reorder);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
         }
 
         _createClass(Reorder, [{
@@ -80,11 +80,11 @@
         }, {
           key: "render",
           value: function render() {
-            var mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
             var reorderIcon = mode === 'ios' ? 'reorder-three-outline' : 'reorder-two-sharp';
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               "class": mode
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
               name: reorderIcon,
               lazy: false,
               "class": "reorder-icon",
@@ -94,7 +94,7 @@
         }, {
           key: "el",
           get: function get() {
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
           }
         }]);
 
@@ -111,8 +111,8 @@
         function ReorderGroup(hostRef) {
           _classCallCheck(this, ReorderGroup);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-          this.ionItemReorder = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionItemReorder", 7);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          this.ionItemReorder = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionItemReorder", 7);
           this.lastToIndex = -1;
           this.cachedHeights = [];
           this.scrollElTop = 0;
@@ -164,8 +164,8 @@
                     case 5:
                       _context.next = 7;
                       return Promise.resolve().then(__webpack_require__.bind(null,
-                      /*! ./index-eea61379.js */
-                      "./node_modules/@ionic/core/dist/esm/index-eea61379.js"));
+                      /*! ./index-34cb2743.js */
+                      "./node_modules/@ionic/core/dist/esm/index-34cb2743.js"));
 
                     case 7:
                       this.gesture = _context.sent.createGesture({
@@ -302,7 +302,7 @@
             /* Active */
             ;
             item.classList.add(ITEM_REORDER_SELECTED);
-            Object(_haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["a"])();
+            Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["a"])();
           }
         }, {
           key: "onMove",
@@ -326,7 +326,7 @@
             if (toIndex !== this.lastToIndex) {
               var fromIndex = indexForItem(selectedItem);
               this.lastToIndex = toIndex;
-              Object(_haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["b"])();
+              Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["b"])();
               this.reorderMove(fromIndex, toIndex);
             } // Update selected item position
 
@@ -361,7 +361,7 @@
               });
             }
 
-            Object(_haptic_7b8ba70a_js__WEBPACK_IMPORTED_MODULE_2__["h"])();
+            Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["h"])();
           }
         }, {
           key: "completeSync",
@@ -402,18 +402,17 @@
         }, {
           key: "itemIndexForTop",
           value: function itemIndexForTop(deltaY) {
-            var heights = this.cachedHeights;
-            var i = 0; // TODO: since heights is a sorted array of integers, we can do
+            var heights = this.cachedHeights; // TODO: since heights is a sorted array of integers, we can do
             // speed up the search using binary search. Remember that linear-search is still
             // faster than binary-search for small arrays (<64) due CPU branch misprediction.
 
-            for (i = 0; i < heights.length; i++) {
+            for (var i = 0; i < heights.length; i++) {
               if (heights[i] > deltaY) {
-                break;
+                return i;
               }
             }
 
-            return i;
+            return heights.length - 1;
           }
           /********* DOM WRITE ********* */
 
@@ -462,15 +461,15 @@
           value: function render() {
             var _class;
 
-            var mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               "class": (_class = {}, _defineProperty(_class, mode, true), _defineProperty(_class, 'reorder-enabled', !this.disabled), _defineProperty(_class, 'reorder-list-active', this.state !== 0), _class)
             });
           }
         }, {
           key: "el",
           get: function get() {
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
           }
         }], [{
           key: "watchers",

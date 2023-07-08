@@ -27022,7 +27022,7 @@ module.exports = firebase__default['default'];
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n <ion-item lines=\"none\" class=\"close-fake\" text-center (click)=\"dismiss()\" > \n\n   \n  <ion-button color=\"danger\" slot=\"end\" (click)=\"dismiss()\" >\n    <strong>Close</strong> \n  </ion-button>\n    \n</ion-item>\n\n<ion-slides  [options]=\"sliderOpt\" zoom  style=\"border-radius: 100%;\">\n  <ion-slide lines=\"none\" style=\"border-radius: 100%;\">\n    <div class=\"swiper-zoom-container\" style=\"border-radius: 100%;\">\n      <img src=\"{{imgurl}}\" alt=\"No Image\" height=\"320px\" width=\"320px\" style=\"height: 100%;width: 400px;border-radius: 100%;\">\n    </div>\n  </ion-slide>\n</ion-slides>\n\n<ion-content fullscreen (click)=\"dismiss()\">\n\n \n\n\n  \n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n <ion-item lines=\"none\" class=\"close-fake\" text-center (click)=\"dismiss()\" > \r\n\r\n   \r\n  <ion-button color=\"danger\" slot=\"end\" (click)=\"dismiss()\" >\r\n    <strong>Close</strong> \r\n  </ion-button>\r\n    \r\n</ion-item>\r\n\r\n<ion-slides  [options]=\"sliderOpt\" zoom  style=\"border-radius: 100%;\">\r\n  <ion-slide lines=\"none\" style=\"border-radius: 100%;\">\r\n    <div class=\"swiper-zoom-container\" style=\"border-radius: 100%;\">\r\n      <img src=\"{{imgurl}}\" alt=\"No Image\" height=\"320px\" width=\"320px\" style=\"height: 100%;width: 400px;border-radius: 100%;\">\r\n    </div>\r\n  </ion-slide>\r\n</ion-slides>\r\n\r\n<ion-content fullscreen (click)=\"dismiss()\">\r\n\r\n \r\n\r\n\r\n  \r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -27035,7 +27035,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".close-fake {\n  --background:transparent ;\n  margin-top: 70px;\n}\n.close-fake ion-icon {\n  font-size: 2rem;\n}\nion-content {\n  --background:transparent;\n  position: -webkit-sticky;\n  position: sticky;\n  left: 0px;\n  top: 0px;\n  z-index: -1;\n}\nimg {\n  border-radius: 100% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaW1hZ2Utdmlldy9pbWFnZS12aWV3LnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVRLHlCQUFBO0VBS0EsZ0JBQUE7QUFKUjtBQUFRO0VBRUksZUFBQTtBQUNaO0FBSUE7RUFFQSx3QkFBQTtFQUNBLHdCQUFBO0VBQUEsZ0JBQUE7RUFDQSxTQUFBO0VBQ0EsUUFBQTtFQUNBLFdBQUE7QUFGQTtBQUtBO0VBQ0ksOEJBQUE7QUFGSiIsImZpbGUiOiJzcmMvYXBwL2ltYWdlLXZpZXcvaW1hZ2Utdmlldy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2xvc2UtZmFrZVxue1xuICAgICAgICAtLWJhY2tncm91bmQ6dHJhbnNwYXJlbnQgO1xuICAgICAgICBpb24taWNvblxuICAgICAgICB7XG4gICAgICAgICAgICBmb250LXNpemU6IDJyZW07XG4gICAgICAgIH1cbiAgICAgICAgbWFyZ2luLXRvcDogNzBweDtcbn1cblxuaW9uLWNvbnRlbnRcbntcbi0tYmFja2dyb3VuZDp0cmFuc3BhcmVudDtcbnBvc2l0aW9uOiBzdGlja3k7XG5sZWZ0OiAwcHg7XG50b3A6IDBweDtcbnotaW5kZXg6IC0xO1xufVxuXG5pbWd7XG4gICAgYm9yZGVyLXJhZGl1czogMTAwJSFpbXBvcnRhbnQ7XG5cbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".close-fake {\n  --background:transparent ;\n  margin-top: 70px;\n}\n.close-fake ion-icon {\n  font-size: 2rem;\n}\nion-content {\n  --background:transparent;\n  position: -webkit-sticky;\n  position: sticky;\n  left: 0px;\n  top: 0px;\n  z-index: -1;\n}\nimg {\n  border-radius: 100% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaW1hZ2Utdmlldy9pbWFnZS12aWV3LnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVRLHlCQUFBO0VBS0EsZ0JBQUE7QUFKUjtBQUFRO0VBRUksZUFBQTtBQUNaO0FBSUE7RUFFQSx3QkFBQTtFQUNBLHdCQUFBO0VBQUEsZ0JBQUE7RUFDQSxTQUFBO0VBQ0EsUUFBQTtFQUNBLFdBQUE7QUFGQTtBQUtBO0VBQ0ksOEJBQUE7QUFGSiIsImZpbGUiOiJzcmMvYXBwL2ltYWdlLXZpZXcvaW1hZ2Utdmlldy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2xvc2UtZmFrZVxyXG57XHJcbiAgICAgICAgLS1iYWNrZ3JvdW5kOnRyYW5zcGFyZW50IDtcclxuICAgICAgICBpb24taWNvblxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgZm9udC1zaXplOiAycmVtO1xyXG4gICAgICAgIH1cclxuICAgICAgICBtYXJnaW4tdG9wOiA3MHB4O1xyXG59XHJcblxyXG5pb24tY29udGVudFxyXG57XHJcbi0tYmFja2dyb3VuZDp0cmFuc3BhcmVudDtcclxucG9zaXRpb246IHN0aWNreTtcclxubGVmdDogMHB4O1xyXG50b3A6IDBweDtcclxuei1pbmRleDogLTE7XHJcbn1cclxuXHJcbmltZ3tcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwMCUhaW1wb3J0YW50O1xyXG5cclxufSJdfQ== */");
 
 /***/ }),
 
@@ -27049,10 +27049,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageViewPage", function() { return ImageViewPage; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -27083,16 +27090,16 @@ let ImageViewPage = class ImageViewPage {
     }
 };
 ImageViewPage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ModalController"] }
 ];
 ImageViewPage.propDecorators = {
-    imgurl: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
+    imgurl: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
 };
-ImageViewPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+ImageViewPage = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-image-view',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./image-view.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/image-view/image-view.page.html")).default,
-        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./image-view.page.scss */ "./src/app/image-view/image-view.page.scss")).default]
+        template: __importDefault(__webpack_require__(/*! raw-loader!./image-view.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/image-view/image-view.page.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./image-view.page.scss */ "./src/app/image-view/image-view.page.scss")).default]
     })
 ], ImageViewPage);
 

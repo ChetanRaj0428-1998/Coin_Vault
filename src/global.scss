@@ -27,7 +27,9 @@
 .modal-wrapper{
     background: transparent !important;
     --backdrop-opacity: 0!important;
-    //height: 58%!important;
+    height: 100%!important;
+    width: 100%!important;
+
     
 }
 
@@ -83,6 +85,21 @@ background: #0c81ff!important;
 .swiper-zoom-container
 {
   border-radius: 100%!important;
+
+}
+
+ion-popover [popover]:not(:popover-open):not(dialog[open]) {
+  display: contents!important;
+}
+
+.center.md.list-md.list-lines-none.list-md-lines-none.hydrated {
+position: relative;
+  margin-top: 20%!important;
+// margin-bottom: 45%!important;
+  margin-left: 5%!important;
+  margin-right: 5%!important;
+  
+ box-shadow: 0 0 5px 1px rgb(79, 119, 212);
 
 }
 

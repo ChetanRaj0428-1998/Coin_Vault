@@ -52,15 +52,21 @@
       /* harmony import */
 
 
-      var _index_92848855_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./index-92848855.js */
-      "./node_modules/@ionic/core/dist/esm/index-92848855.js");
+      var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./index-7a8b7a1c.js */
+      "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
       /* harmony import */
 
 
-      var _ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! ./ionic-global-23e7365a.js */
-      "./node_modules/@ionic/core/dist/esm/ionic-global-23e7365a.js");
+      var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./ionic-global-63a97a32.js */
+      "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
+      /* harmony import */
+
+
+      var _helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./helpers-1457892a.js */
+      "./node_modules/@ionic/core/dist/esm/helpers-1457892a.js");
 
       var slideCss = "ion-slide{display:block;width:100%;height:100%}.slide-zoom{display:block;width:100%;text-align:center}.swiper-slide{display:-ms-flexbox;display:flex;position:relative;-ms-flex-negative:0;flex-shrink:0;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:100%;height:100%;font-size:18px;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box}.swiper-slide img{width:auto;max-width:100%;height:auto;max-height:100%}";
 
@@ -68,7 +74,7 @@
         function Slide(hostRef) {
           _classCallCheck(this, Slide);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
         }
 
         _createClass(Slide, [{
@@ -76,8 +82,8 @@
           value: function render() {
             var _class;
 
-            var mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               "class": (_class = {}, _defineProperty(_class, mode, true), _defineProperty(_class, 'swiper-slide', true), _defineProperty(_class, 'swiper-zoom-container', true), _class)
             });
           }
@@ -96,28 +102,27 @@
 
           _classCallCheck(this, Slides);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-          this.ionSlidesDidLoad = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlidesDidLoad", 7);
-          this.ionSlideTap = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTap", 7);
-          this.ionSlideDoubleTap = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideDoubleTap", 7);
-          this.ionSlideWillChange = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideWillChange", 7);
-          this.ionSlideDidChange = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideDidChange", 7);
-          this.ionSlideNextStart = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideNextStart", 7);
-          this.ionSlidePrevStart = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlidePrevStart", 7);
-          this.ionSlideNextEnd = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideNextEnd", 7);
-          this.ionSlidePrevEnd = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlidePrevEnd", 7);
-          this.ionSlideTransitionStart = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTransitionStart", 7);
-          this.ionSlideTransitionEnd = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTransitionEnd", 7);
-          this.ionSlideDrag = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideDrag", 7);
-          this.ionSlideReachStart = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideReachStart", 7);
-          this.ionSlideReachEnd = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideReachEnd", 7);
-          this.ionSlideTouchStart = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTouchStart", 7);
-          this.ionSlideTouchEnd = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTouchEnd", 7);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          this.ionSlidesDidLoad = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlidesDidLoad", 7);
+          this.ionSlideTap = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTap", 7);
+          this.ionSlideDoubleTap = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideDoubleTap", 7);
+          this.ionSlideWillChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideWillChange", 7);
+          this.ionSlideDidChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideDidChange", 7);
+          this.ionSlideNextStart = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideNextStart", 7);
+          this.ionSlidePrevStart = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlidePrevStart", 7);
+          this.ionSlideNextEnd = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideNextEnd", 7);
+          this.ionSlidePrevEnd = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlidePrevEnd", 7);
+          this.ionSlideTransitionStart = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTransitionStart", 7);
+          this.ionSlideTransitionEnd = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTransitionEnd", 7);
+          this.ionSlideDrag = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideDrag", 7);
+          this.ionSlideReachStart = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideReachStart", 7);
+          this.ionSlideReachEnd = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideReachEnd", 7);
+          this.ionSlideTouchStart = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTouchStart", 7);
+          this.ionSlideTouchEnd = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionSlideTouchEnd", 7);
           this.swiperReady = false;
           this.swiper = new Promise(function (resolve) {
             _this.readySwiper = resolve;
           });
-          this.didInit = false;
           /**
            * Options to pass to the swiper instance.
            * See http://idangero.us/swiper/api/ for valid options
@@ -147,7 +152,7 @@
                   switch (_context.prev = _context.next) {
                     case 0:
                       if (!this.swiperReady) {
-                        _context.next = 7;
+                        _context.next = 8;
                         break;
                       }
 
@@ -156,11 +161,17 @@
 
                     case 3:
                       swiper = _context.sent;
+
+                      if (!(swiper === null || swiper === void 0 ? void 0 : swiper.params)) {
+                        _context.next = 8;
+                        break;
+                      }
+
                       Object.assign(swiper.params, this.options);
-                      _context.next = 7;
+                      _context.next = 8;
                       return this.update();
 
-                    case 7:
+                    case 8:
                     case "end":
                       return _context.stop();
                   }
@@ -175,12 +186,16 @@
             return optionsChanged;
           }()
         }, {
+          key: "componentWillLoad",
+          value: function componentWillLoad() {
+            console.warn("[Deprecation Warning]: ion-slides has been deprecated and will be removed in Ionic Framework v7.0. We recommend using the framework-specific integrations that Swiper.js provides, allowing for faster bug fixes and an improved developer experience. See https://ionicframework.com/docs/api/slides#migration for more information including migration steps.");
+          }
+        }, {
           key: "connectedCallback",
           value: function connectedCallback() {
             var _this2 = this;
 
-            // tslint:disable-next-line: strict-type-predicates
-            if (typeof MutationObserver !== 'undefined') {
+            {
               var mut = this.mutationO = new MutationObserver(function () {
                 if (_this2.swiperReady) {
                   _this2.update();
@@ -190,45 +205,18 @@
                 childList: true,
                 subtree: true
               });
-              this.el.componentOnReady().then(function () {
-                if (!_this2.didInit) {
-                  _this2.didInit = true;
-
-                  _this2.initSwiper();
-                }
+              Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_2__["c"])(this.el, function () {
+                _this2.initSwiper();
               });
             }
           }
         }, {
           key: "disconnectedCallback",
           value: function disconnectedCallback() {
-            var _this3 = this;
-
             if (this.mutationO) {
               this.mutationO.disconnect();
               this.mutationO = undefined;
             }
-            /**
-             * We need to synchronously destroy
-             * swiper otherwise it is possible
-             * that it will be left in a
-             * destroyed state if connectedCallback
-             * is called multiple times
-             */
-
-
-            var swiper = this.syncSwiper;
-
-            if (swiper !== undefined) {
-              swiper.destroy(true, true);
-              this.swiper = new Promise(function (resolve) {
-                _this3.readySwiper = resolve;
-              });
-              this.swiperReady = false;
-              this.syncSwiper = undefined;
-            }
-
-            this.didInit = false;
           }
           /**
            * Update the underlying slider implementation. Call this if you've added or removed
@@ -816,10 +804,10 @@
 
                       _context18.next = 3;
                       return __webpack_require__.e(
-                      /*! import() | swiper-bundle-95afeea2-js */
-                      "swiper-bundle-95afeea2-js").then(__webpack_require__.bind(null,
-                      /*! ./swiper.bundle-95afeea2.js */
-                      "./node_modules/@ionic/core/dist/esm/swiper.bundle-95afeea2.js"));
+                      /*! import() | swiper-bundle-6c5e7804-js */
+                      "swiper-bundle-6c5e7804-js").then(__webpack_require__.bind(null,
+                      /*! ./swiper.bundle-6c5e7804.js */
+                      "./node_modules/@ionic/core/dist/esm/swiper.bundle-6c5e7804.js"));
 
                     case 3:
                       _yield$__webpack_requ = _context18.sent;
@@ -830,10 +818,9 @@
                     case 7:
                       swiper = new Swiper(this.el, finalOptions);
                       this.swiperReady = true;
-                      this.syncSwiper = swiper;
                       this.readySwiper(swiper);
 
-                    case 11:
+                    case 10:
                     case "end":
                       return _context18.stop();
                   }
@@ -850,7 +837,7 @@
         }, {
           key: "normalizeOptions",
           value: function normalizeOptions() {
-            var _this4 = this;
+            var _this3 = this;
 
             // Base options, can be changed
             // TODO Add interface SwiperOptions
@@ -960,7 +947,10 @@
               on: {
                 init: function init() {
                   setTimeout(function () {
-                    _this4.ionSlidesDidLoad.emit();
+                    _this3.ionSlidesDidLoad.emit(); // Forces the swiper instance to update after initializing.
+
+
+                    _this3.update();
                   }, 20);
                 },
                 slideChangeTransitionStart: this.ionSlideWillChange.emit,
@@ -992,29 +982,29 @@
           key: "render",
           value: function render() {
             var _class2,
-                _this5 = this;
+                _this4 = this;
 
-            var mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               "class": (_class2 = {}, _defineProperty(_class2, "".concat(mode), true), _defineProperty(_class2, "slides-".concat(mode), true), _defineProperty(_class2, 'swiper-container', true), _class2)
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
               "class": "swiper-wrapper"
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), this.pager && Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), this.pager && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
               "class": "swiper-pagination",
               ref: function ref(el) {
-                return _this5.paginationEl = el;
+                return _this4.paginationEl = el;
               }
-            }), this.scrollbar && Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
+            }), this.scrollbar && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
               "class": "swiper-scrollbar",
               ref: function ref(el) {
-                return _this5.scrollbarEl = el;
+                return _this4.scrollbarEl = el;
               }
             }));
           }
         }, {
           key: "el",
           get: function get() {
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
           }
         }], [{
           key: "assetsDirs",
@@ -1035,7 +1025,9 @@
 
       var waitForSlides = function waitForSlides(el) {
         return Promise.all(Array.from(el.querySelectorAll('ion-slide')).map(function (s) {
-          return s.componentOnReady();
+          return new Promise(function (resolve) {
+            return Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_2__["c"])(s, resolve);
+          });
         }));
       };
 

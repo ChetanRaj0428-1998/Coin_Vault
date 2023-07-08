@@ -66,34 +66,34 @@
       /* harmony import */
 
 
-      var _index_92848855_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./index-92848855.js */
-      "./node_modules/@ionic/core/dist/esm/index-92848855.js");
+      var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./index-7a8b7a1c.js */
+      "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
       /* harmony import */
 
 
-      var _ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! ./ionic-global-23e7365a.js */
-      "./node_modules/@ionic/core/dist/esm/ionic-global-23e7365a.js");
+      var _helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./helpers-1457892a.js */
+      "./node_modules/@ionic/core/dist/esm/helpers-1457892a.js");
       /* harmony import */
 
 
-      var _helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./helpers-5c745fbd.js */
-      "./node_modules/@ionic/core/dist/esm/helpers-5c745fbd.js");
+      var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./ionic-global-63a97a32.js */
+      "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
       /* harmony import */
 
 
-      var _theme_5641d27f_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! ./theme-5641d27f.js */
-      "./node_modules/@ionic/core/dist/esm/theme-5641d27f.js");
+      var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ./theme-ff3fc52f.js */
+      "./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js");
 
       var Route = /*#__PURE__*/function () {
         function Route(hostRef) {
           _classCallCheck(this, Route);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-          this.ionRouteDataChanged = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRouteDataChanged", 7);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          this.ionRouteDataChanged = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRouteDataChanged", 7);
           /**
            * Relative path that needs to match in order for this route to apply.
            *
@@ -165,8 +165,8 @@
         function RouteRedirect(hostRef) {
           _classCallCheck(this, RouteRedirect);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-          this.ionRouteRedirectChanged = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRouteRedirectChanged", 7);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          this.ionRouteRedirectChanged = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRouteRedirectChanged", 7);
         }
 
         _createClass(RouteRedirect, [{
@@ -194,13 +194,37 @@
 
       var ROUTER_INTENT_NONE = 'root';
       var ROUTER_INTENT_FORWARD = 'forward';
-      var ROUTER_INTENT_BACK = 'back';
+      var ROUTER_INTENT_BACK = 'back'; // Join the non empty segments with "/".
 
       var generatePath = function generatePath(segments) {
         var path = segments.filter(function (s) {
           return s.length > 0;
         }).join('/');
         return '/' + path;
+      };
+
+      var generateUrl = function generateUrl(segments, useHash, queryString) {
+        var url = generatePath(segments);
+
+        if (useHash) {
+          url = '#' + url;
+        }
+
+        if (queryString !== undefined) {
+          url += '?' + queryString;
+        }
+
+        return url;
+      };
+
+      var writePath = function writePath(history, root, useHash, path, direction, state, queryString) {
+        var url = generateUrl([].concat(_toConsumableArray(parsePath(root).segments), _toConsumableArray(path)), useHash, queryString);
+
+        if (direction === ROUTER_INTENT_FORWARD) {
+          history.pushState(state, '', url);
+        } else {
+          history.replaceState(state, '', url);
+        }
       };
 
       var chainToPath = function chainToPath(chain) {
@@ -245,25 +269,12 @@
         }
 
         return path;
-      };
+      }; // Remove the prefix segments from the path segments.
+      //
+      // Return:
+      // - null when the path segments do not start with the passed prefix,
+      // - the path segments after the prefix otherwise.
 
-      var writePath = function writePath(history, root, useHash, path, direction, state, queryString) {
-        var url = generatePath([].concat(_toConsumableArray(parsePath(root)), _toConsumableArray(path)));
-
-        if (useHash) {
-          url = '#' + url;
-        }
-
-        if (queryString !== undefined) {
-          url = url + '?' + queryString;
-        }
-
-        if (direction === ROUTER_INTENT_FORWARD) {
-          history.pushState(state, '', url);
-        } else {
-          history.replaceState(state, '', url);
-        }
-      };
 
       var removePrefix = function removePrefix(prefix, path) {
         if (prefix.length > path.length) {
@@ -275,7 +286,7 @@
         }
 
         for (var i = 0; i < prefix.length; i++) {
-          if (prefix[i].length > 0 && prefix[i] !== path[i]) {
+          if (prefix[i] !== path[i]) {
             return null;
           }
         }
@@ -288,35 +299,42 @@
       };
 
       var readPath = function readPath(loc, root, useHash) {
-        var pathname = loc.pathname;
-
-        if (useHash) {
-          var hash = loc.hash;
-          pathname = hash[0] === '#' ? hash.slice(1) : '';
-        }
-
-        var prefix = parsePath(root);
-        var path = parsePath(pathname);
+        var prefix = parsePath(root).segments;
+        var pathname = useHash ? loc.hash.slice(1) : loc.pathname;
+        var path = parsePath(pathname).segments;
         return removePrefix(prefix, path);
-      };
+      }; // Parses the path to:
+      // - segments an array of '/' separated parts,
+      // - queryString (undefined when no query string).
+
 
       var parsePath = function parsePath(path) {
-        if (path == null) {
-          return [''];
+        var segments = [''];
+        var queryString;
+
+        if (path != null) {
+          var qsStart = path.indexOf('?');
+
+          if (qsStart > -1) {
+            queryString = path.substr(qsStart + 1);
+            path = path.substr(0, qsStart);
+          }
+
+          segments = path.split('/').map(function (s) {
+            return s.trim();
+          }).filter(function (s) {
+            return s.length > 0;
+          });
+
+          if (segments.length === 0) {
+            segments = [''];
+          }
         }
 
-        var removeQueryString = path.split('?')[0];
-        var segments = removeQueryString.split('/').map(function (s) {
-          return s.trim();
-        }).filter(function (s) {
-          return s.length > 0;
-        });
-
-        if (segments.length === 0) {
-          return [''];
-        } else {
-          return segments;
-        }
+        return {
+          segments: segments,
+          queryString: queryString
+        };
       };
 
       var printRoutes = function printRoutes(routes) {
@@ -361,7 +379,7 @@
             var redirect = _step5.value;
 
             if (redirect.to) {
-              console.debug('FROM: ', "$c ".concat(generatePath(redirect.from)), 'font-weight: bold', ' TO: ', "$c ".concat(generatePath(redirect.to)), 'font-weight: bold');
+              console.debug('FROM: ', "$c ".concat(generatePath(redirect.from)), 'font-weight: bold', ' TO: ', "$c ".concat(generatePath(redirect.to.segments)), 'font-weight: bold');
             }
           }
         } catch (err) {
@@ -400,7 +418,9 @@
 
                 case 6:
                   _context.next = 8;
-                  return outlet.componentOnReady();
+                  return new Promise(function (resolve) {
+                    return Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_1__["c"])(outlet, resolve);
+                  });
 
                 case 8:
                   route = chain[index];
@@ -551,18 +571,23 @@
         }
 
         var outlet = root.querySelector(QUERY);
-        return outlet ? outlet : undefined;
-      };
+        return outlet !== null && outlet !== void 0 ? outlet : undefined;
+      }; // Returns whether the given redirect matches the given path segments.
+      //
+      // A redirect matches when the segments of the path and redirect.from are equal.
+      // Note that segments are only checked until redirect.from contains a '*' which matches any path segment.
+      // The path ['some', 'path', 'to', 'page'] matches both ['some', 'path', 'to', 'page'] and ['some', 'path', '*'].
 
-      var matchesRedirect = function matchesRedirect(input, route) {
-        var from = route.from,
-            to = route.to;
+
+      var matchesRedirect = function matchesRedirect(path, redirect) {
+        var from = redirect.from,
+            to = redirect.to;
 
         if (to === undefined) {
           return false;
         }
 
-        if (from.length > input.length) {
+        if (from.length > path.length) {
           return false;
         }
 
@@ -573,31 +598,80 @@
             return true;
           }
 
-          if (expected !== input[i]) {
+          if (expected !== path[i]) {
             return false;
           }
         }
 
-        return from.length === input.length;
-      };
+        return from.length === path.length;
+      }; // Returns the first redirect matching the path segments or undefined when no match found.
 
-      var routeRedirect = function routeRedirect(path, routes) {
-        return routes.find(function (route) {
-          return matchesRedirect(path, route);
+
+      var findRouteRedirect = function findRouteRedirect(path, redirects) {
+        return redirects.find(function (redirect) {
+          return matchesRedirect(path, redirect);
         });
       };
 
       var matchesIDs = function matchesIDs(ids, chain) {
         var len = Math.min(ids.length, chain.length);
-        var i = 0;
+        var score = 0;
 
-        for (; i < len; i++) {
-          if (ids[i].toLowerCase() !== chain[i].id) {
+        for (var i = 0; i < len; i++) {
+          var routeId = ids[i];
+          var routeChain = chain[i]; // Skip results where the route id does not match the chain at the same index
+
+          if (routeId.id.toLowerCase() !== routeChain.id) {
             break;
           }
+
+          if (routeId.params) {
+            var routeIdParams = Object.keys(routeId.params);
+            /**
+             * Only compare routes with the chain that have the same number of parameters.
+             */
+
+            if (routeIdParams.length === routeChain.path.length) {
+              /**
+               * Maps the route's params into a path based on the path variable names,
+               * to compare against the route chain format.
+               *
+               * Before:
+               * ```ts
+               * {
+               *  params: {
+               *    s1: 'a',
+               *    s2: 'b'
+               *  }
+               * }
+               * ```
+               *
+               * After:
+               * ```ts
+               * [':s1',':s2']
+               * ```
+               */
+              var pathWithParams = routeIdParams.map(function (key) {
+                return ":".concat(key);
+              });
+
+              for (var j = 0; j < pathWithParams.length; j++) {
+                // Skip results where the path variable is not a match
+                if (pathWithParams[j].toLowerCase() !== routeChain.path[j]) {
+                  break;
+                } // Weight path matches for the same index higher.
+
+
+                score++;
+              }
+            }
+          } // Weight id matches
+
+
+          score++;
         }
 
-        return i;
+        return score;
       };
 
       var matchesPath = function matchesPath(inputPath, chain) {
@@ -652,32 +726,25 @@
             return {
               id: route.id,
               path: route.path,
-              params: mergeParams(route.params, allparams[i])
+              params: mergeParams(route.params, allparams[i]),
+              beforeEnter: route.beforeEnter,
+              beforeLeave: route.beforeLeave
             };
           });
         }
 
         return chain;
-      };
+      }; // Merges the route parameter objects.
+      // Returns undefined when both parameters are undefined.
+
 
       var mergeParams = function mergeParams(a, b) {
-        if (!a && b) {
-          return b;
-        } else if (a && !b) {
-          return a;
-        } else if (a && b) {
-          return Object.assign(Object.assign({}, a), b);
-        }
-
-        return undefined;
+        return a || b ? Object.assign(Object.assign({}, a), b) : undefined;
       };
 
       var routerIDsToChain = function routerIDsToChain(ids, chains) {
         var match = null;
         var maxMatches = 0;
-        var plainIDs = ids.map(function (i) {
-          return i.id;
-        });
 
         var _iterator7 = _createForOfIteratorHelper(chains),
             _step7;
@@ -685,7 +752,7 @@
         try {
           for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
             var chain = _step7.value;
-            var score = matchesIDs(plainIDs, chain);
+            var score = matchesIDs(ids, chain);
 
             if (score > maxMatches) {
               match = chain;
@@ -803,44 +870,6 @@
         return RouterSegments;
       }();
 
-      var readRedirects = function readRedirects(root) {
-        return Array.from(root.children).filter(function (el) {
-          return el.tagName === 'ION-ROUTE-REDIRECT';
-        }).map(function (el) {
-          var to = readProp(el, 'to');
-          return {
-            from: parsePath(readProp(el, 'from')),
-            to: to == null ? undefined : parsePath(to)
-          };
-        });
-      };
-
-      var readRoutes = function readRoutes(root) {
-        return flattenRouterTree(readRouteNodes(root));
-      };
-
-      var readRouteNodes = function readRouteNodes(root) {
-        var node = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : root;
-        return Array.from(node.children).filter(function (el) {
-          return el.tagName === 'ION-ROUTE' && el.component;
-        }).map(function (el) {
-          var component = readProp(el, 'component');
-
-          if (component == null) {
-            throw new Error('component missing in ion-route');
-          }
-
-          return {
-            path: parsePath(readProp(el, 'url')),
-            id: component.toLowerCase(),
-            params: el.componentProps,
-            beforeLeave: el.beforeLeave,
-            beforeEnter: el.beforeEnter,
-            children: readRouteNodes(root, el)
-          };
-        });
-      };
-
       var readProp = function readProp(el, prop) {
         if (prop in el) {
           return el[prop];
@@ -853,8 +882,40 @@
         return null;
       };
 
+      var readRedirects = function readRedirects(root) {
+        return Array.from(root.children).filter(function (el) {
+          return el.tagName === 'ION-ROUTE-REDIRECT';
+        }).map(function (el) {
+          var to = readProp(el, 'to');
+          return {
+            from: parsePath(readProp(el, 'from')).segments,
+            to: to == null ? undefined : parsePath(to)
+          };
+        });
+      };
+
+      var readRoutes = function readRoutes(root) {
+        return flattenRouterTree(readRouteNodes(root));
+      };
+
+      var readRouteNodes = function readRouteNodes(node) {
+        return Array.from(node.children).filter(function (el) {
+          return el.tagName === 'ION-ROUTE' && el.component;
+        }).map(function (el) {
+          var component = readProp(el, 'component');
+          return {
+            path: parsePath(readProp(el, 'url')).segments,
+            id: component.toLowerCase(),
+            params: el.componentProps,
+            beforeLeave: el.beforeLeave,
+            beforeEnter: el.beforeEnter,
+            children: readRouteNodes(el)
+          };
+        });
+      };
+
       var flattenRouterTree = function flattenRouterTree(nodes) {
-        var routes = [];
+        var chains = [];
 
         var _iterator11 = _createForOfIteratorHelper(nodes),
             _step11;
@@ -862,7 +923,7 @@
         try {
           for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
             var node = _step11.value;
-            flattenNode([], routes, node);
+            flattenNode([], chains, node);
           }
         } catch (err) {
           _iterator11.e(err);
@@ -870,12 +931,12 @@
           _iterator11.f();
         }
 
-        return routes;
+        return chains;
       };
 
-      var flattenNode = function flattenNode(chain, routes, node) {
-        var s = chain.slice();
-        s.push({
+      var flattenNode = function flattenNode(chain, chains, node) {
+        chain = chain.slice();
+        chain.push({
           id: node.id,
           path: node.path,
           params: node.params,
@@ -884,7 +945,7 @@
         });
 
         if (node.children.length === 0) {
-          routes.push(s);
+          chains.push(chain);
           return;
         }
 
@@ -893,8 +954,8 @@
 
         try {
           for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
-            var sub = _step12.value;
-            flattenNode(s, routes, sub);
+            var child = _step12.value;
+            flattenNode(chain, chains, child);
           }
         } catch (err) {
           _iterator12.e(err);
@@ -907,17 +968,16 @@
         function Router(hostRef) {
           _classCallCheck(this, Router);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-          this.ionRouteWillChange = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRouteWillChange", 7);
-          this.ionRouteDidChange = Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRouteDidChange", 7);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          this.ionRouteWillChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRouteWillChange", 7);
+          this.ionRouteDidChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRouteDidChange", 7);
           this.previousPath = null;
           this.busy = false;
           this.state = 0;
           this.lastState = 0;
           /**
-           * By default `ion-router` will match the routes at the root path ("/").
-           * That can be changed when
-           *
+           * The root path to use when matching URLs. By default, this is set to "/", but you can specify
+           * an alternate prefix for all URL paths.
            */
 
           this.root = '/';
@@ -931,7 +991,7 @@
            * Usually "hash-less" navigation works better for SEO and it's more user friendly too, but it might
            * requires additional server-side configuration in order to properly work.
            *
-           * On the otherside hash-navigation is much easier to deploy, it even works over the file protocol.
+           * On the other side hash-navigation is much easier to deploy, it even works over the file protocol.
            *
            * By default, this property is `true`, change to `false` to allow hash-less URLs.
            */
@@ -943,20 +1003,46 @@
           key: "componentWillLoad",
           value: function () {
             var _componentWillLoad = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              var canProceed, redirect, path;
               return regeneratorRuntime.wrap(function _callee3$(_context3) {
                 while (1) {
                   switch (_context3.prev = _context3.next) {
                     case 0:
-                      console.debug('[ion-router] router will load');
-                      _context3.next = 3;
+                      _context3.next = 2;
                       return waitUntilNavNode();
 
-                    case 3:
-                      console.debug('[ion-router] found nav');
-                      _context3.next = 6;
+                    case 2:
+                      _context3.next = 4;
+                      return this.runGuards(this.getPath());
+
+                    case 4:
+                      canProceed = _context3.sent;
+
+                      if (!(canProceed !== true)) {
+                        _context3.next = 14;
+                        break;
+                      }
+
+                      if (!(typeof canProceed === 'object')) {
+                        _context3.next = 12;
+                        break;
+                      }
+
+                      redirect = canProceed.redirect;
+                      path = parsePath(redirect);
+                      this.setPath(path.segments, ROUTER_INTENT_NONE, path.queryString);
+                      _context3.next = 12;
+                      return this.writeNavStateRoot(path.segments, ROUTER_INTENT_NONE);
+
+                    case 12:
+                      _context3.next = 16;
+                      break;
+
+                    case 14:
+                      _context3.next = 16;
                       return this.onRoutesChanged();
 
-                    case 6:
+                    case 16:
                     case "end":
                       return _context3.stop();
                   }
@@ -973,42 +1059,47 @@
         }, {
           key: "componentDidLoad",
           value: function componentDidLoad() {
-            window.addEventListener('ionRouteRedirectChanged', Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["e"])(this.onRedirectChanged.bind(this), 10));
-            window.addEventListener('ionRouteDataChanged', Object(_helpers_5c745fbd_js__WEBPACK_IMPORTED_MODULE_2__["e"])(this.onRoutesChanged.bind(this), 100));
+            window.addEventListener('ionRouteRedirectChanged', Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_1__["o"])(this.onRedirectChanged.bind(this), 10));
+            window.addEventListener('ionRouteDataChanged', Object(_helpers_1457892a_js__WEBPACK_IMPORTED_MODULE_1__["o"])(this.onRoutesChanged.bind(this), 100));
           }
         }, {
           key: "onPopState",
           value: function () {
             var _onPopState = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-              var direction, path, canProceed;
+              var direction, segments, canProceed;
               return regeneratorRuntime.wrap(function _callee4$(_context4) {
                 while (1) {
                   switch (_context4.prev = _context4.next) {
                     case 0:
                       direction = this.historyDirection();
-                      path = this.getPath();
+                      segments = this.getPath();
                       _context4.next = 4;
-                      return this.runGuards(path);
+                      return this.runGuards(segments);
 
                     case 4:
                       canProceed = _context4.sent;
 
                       if (!(canProceed !== true)) {
-                        _context4.next = 8;
+                        _context4.next = 11;
                         break;
                       }
 
-                      if (typeof canProceed === 'object') {
-                        path = parsePath(canProceed.redirect);
+                      if (!(typeof canProceed === 'object')) {
+                        _context4.next = 10;
+                        break;
                       }
 
-                      return _context4.abrupt("return", false);
-
-                    case 8:
-                      console.debug('[ion-router] URL changed -> update nav', path, direction);
-                      return _context4.abrupt("return", this.writeNavStateRoot(path, direction));
+                      segments = parsePath(canProceed.redirect).segments;
+                      _context4.next = 11;
+                      break;
 
                     case 10:
+                      return _context4.abrupt("return", false);
+
+                    case 11:
+                      return _context4.abrupt("return", this.writeNavStateRoot(segments, direction));
+
+                    case 12:
                     case "end":
                       return _context4.stop();
                   }
@@ -1095,8 +1186,7 @@
             var _push = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(url) {
               var direction,
                   animation,
-                  path,
-                  queryString,
+                  parsedPath,
                   canProceed,
                   _args6 = arguments;
               return regeneratorRuntime.wrap(function _callee6$(_context6) {
@@ -1110,38 +1200,35 @@
                         url = new URL(url, window.location.href).pathname;
                       }
 
-                      console.debug('[ion-router] URL pushed -> updating nav', url, direction);
-                      path = parsePath(url);
-                      queryString = url.split('?')[1];
-                      _context6.next = 8;
-                      return this.runGuards(path);
+                      parsedPath = parsePath(url);
+                      _context6.next = 6;
+                      return this.runGuards(parsedPath.segments);
 
-                    case 8:
+                    case 6:
                       canProceed = _context6.sent;
 
                       if (!(canProceed !== true)) {
-                        _context6.next = 16;
+                        _context6.next = 13;
                         break;
                       }
 
                       if (!(typeof canProceed === 'object')) {
-                        _context6.next = 15;
+                        _context6.next = 12;
                         break;
                       }
 
-                      path = parsePath(canProceed.redirect);
-                      queryString = canProceed.redirect.split('?')[1];
-                      _context6.next = 16;
+                      parsedPath = parsePath(canProceed.redirect);
+                      _context6.next = 13;
                       break;
 
-                    case 15:
+                    case 12:
                       return _context6.abrupt("return", false);
 
-                    case 16:
-                      this.setPath(path, direction, queryString);
-                      return _context6.abrupt("return", this.writeNavStateRoot(path, direction, animation));
+                    case 13:
+                      this.setPath(parsedPath.segments, direction, parsedPath.queryString);
+                      return _context6.abrupt("return", this.writeNavStateRoot(parsedPath.segments, direction, animation));
 
-                    case 18:
+                    case 15:
                     case "end":
                       return _context6.stop();
                   }
@@ -1175,12 +1262,10 @@
                 while (1) {
                   switch (_context7.prev = _context7.next) {
                     case 0:
-                      console.debug('CURRENT PATH', this.getPath());
-                      console.debug('PREVIOUS PATH', this.previousPath);
                       printRoutes(readRoutes(this.el));
                       printRedirects(readRedirects(this.el));
 
-                    case 4:
+                    case 2:
                     case "end":
                       return _context7.stop();
                   }
@@ -1247,15 +1332,14 @@
                       return _context8.abrupt("return", false);
 
                     case 17:
-                      console.debug('[ion-router] nav changed -> update URL', ids, path);
                       this.setPath(path, direction);
-                      _context8.next = 21;
+                      _context8.next = 20;
                       return this.safeWriteNavState(outlet, chain, ROUTER_INTENT_NONE, path, null, ids.length);
 
-                    case 21:
+                    case 20:
                       return _context8.abrupt("return", true);
 
-                    case 22:
+                    case 21:
                     case "end":
                       return _context8.stop();
                   }
@@ -1268,16 +1352,18 @@
             }
 
             return navChanged;
-          }()
+          }() // This handler gets called when a `ion-route-redirect` component is added to the DOM or if the from or to property of such node changes.
+
         }, {
           key: "onRedirectChanged",
           value: function onRedirectChanged() {
             var path = this.getPath();
 
-            if (path && routeRedirect(path, readRedirects(this.el))) {
+            if (path && findRouteRedirect(path, readRedirects(this.el))) {
               this.writeNavStateRoot(path, ROUTER_INTENT_NONE);
             }
-          }
+          } // This handler gets called when a `ion-route` component is added to the DOM or if the from or to property of such node changes.
+
         }, {
           key: "onRoutesChanged",
           value: function onRoutesChanged() {
@@ -1286,11 +1372,13 @@
         }, {
           key: "historyDirection",
           value: function historyDirection() {
+            var _a;
+
             var win = window;
 
             if (win.history.state === null) {
               this.state++;
-              win.history.replaceState(this.state, win.document.title, win.document.location && win.document.location.href);
+              win.history.replaceState(this.state, win.document.title, (_a = win.document.location) === null || _a === void 0 ? void 0 : _a.href);
             }
 
             var state = win.history.state;
@@ -1299,17 +1387,20 @@
 
             if (state > lastState || state >= lastState && lastState > 0) {
               return ROUTER_INTENT_FORWARD;
-            } else if (state < lastState) {
-              return ROUTER_INTENT_BACK;
-            } else {
-              return ROUTER_INTENT_NONE;
             }
+
+            if (state < lastState) {
+              return ROUTER_INTENT_BACK;
+            }
+
+            return ROUTER_INTENT_NONE;
           }
         }, {
           key: "writeNavStateRoot",
           value: function () {
             var _writeNavStateRoot = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9(path, direction, animation) {
-              var redirects, redirect, redirectFrom, routes, chain;
+              var redirects, redirect, redirectFrom, _redirect$to, segments, queryString, routes, chain;
+
               return regeneratorRuntime.wrap(function _callee9$(_context9) {
                 while (1) {
                   switch (_context9.prev = _context9.next) {
@@ -1325,13 +1416,14 @@
                     case 3:
                       // lookup redirect rule
                       redirects = readRedirects(this.el);
-                      redirect = routeRedirect(path, redirects);
+                      redirect = findRouteRedirect(path, redirects);
                       redirectFrom = null;
 
                       if (redirect) {
-                        this.setPath(redirect.to, direction);
+                        _redirect$to = redirect.to, segments = _redirect$to.segments, queryString = _redirect$to.queryString;
+                        this.setPath(segments, direction, queryString);
                         redirectFrom = redirect.from;
-                        path = redirect.to;
+                        path = segments;
                       } // lookup route chain
 
 
@@ -1454,7 +1546,11 @@
             }
 
             return lock;
-          }()
+          }() // Executes the beforeLeave hook of the source route and the beforeEnter hook of the target route if they exist.
+          //
+          // When the beforeLeave hook does not return true (to allow navigating) then that value is returned early and the beforeEnter is executed.
+          // Otherwise the beforeEnterHook hook of the target route is executed.
+
         }, {
           key: "runGuards",
           value: function () {
@@ -1462,91 +1558,67 @@
               var to,
                   from,
                   routes,
-                  toChain,
                   fromChain,
-                  beforeEnterHook,
                   beforeLeaveHook,
                   canLeave,
-                  canEnter,
+                  toChain,
+                  beforeEnterHook,
                   _args12 = arguments;
               return regeneratorRuntime.wrap(function _callee12$(_context12) {
                 while (1) {
                   switch (_context12.prev = _context12.next) {
                     case 0:
                       to = _args12.length > 0 && _args12[0] !== undefined ? _args12[0] : this.getPath();
-                      from = _args12.length > 1 && _args12[1] !== undefined ? _args12[1] : parsePath(this.previousPath);
+                      from = _args12.length > 1 ? _args12[1] : undefined;
+
+                      if (from === undefined) {
+                        from = parsePath(this.previousPath).segments;
+                      }
 
                       if (!(!to || !from)) {
-                        _context12.next = 4;
+                        _context12.next = 5;
                         break;
                       }
 
                       return _context12.abrupt("return", true);
 
-                    case 4:
+                    case 5:
                       routes = readRoutes(this.el);
-                      toChain = routerPathToChain(to, routes);
                       fromChain = routerPathToChain(from, routes);
-                      beforeEnterHook = toChain && toChain[toChain.length - 1].beforeEnter;
                       beforeLeaveHook = fromChain && fromChain[fromChain.length - 1].beforeLeave;
 
                       if (!beforeLeaveHook) {
-                        _context12.next = 15;
+                        _context12.next = 14;
                         break;
                       }
 
-                      _context12.next = 12;
+                      _context12.next = 11;
                       return beforeLeaveHook();
 
-                    case 12:
+                    case 11:
                       _context12.t0 = _context12.sent;
-                      _context12.next = 16;
+                      _context12.next = 15;
                       break;
 
-                    case 15:
+                    case 14:
                       _context12.t0 = true;
 
-                    case 16:
+                    case 15:
                       canLeave = _context12.t0;
 
                       if (!(canLeave === false || typeof canLeave === 'object')) {
-                        _context12.next = 19;
+                        _context12.next = 18;
                         break;
                       }
 
                       return _context12.abrupt("return", canLeave);
 
-                    case 19:
-                      if (!beforeEnterHook) {
-                        _context12.next = 25;
-                        break;
-                      }
+                    case 18:
+                      toChain = routerPathToChain(to, routes);
+                      beforeEnterHook = toChain && toChain[toChain.length - 1].beforeEnter;
+                      return _context12.abrupt("return", beforeEnterHook ? beforeEnterHook() : true);
 
-                      _context12.next = 22;
-                      return beforeEnterHook();
-
-                    case 22:
-                      _context12.t1 = _context12.sent;
-                      _context12.next = 26;
-                      break;
-
-                    case 25:
-                      _context12.t1 = true;
-
-                    case 26:
-                      canEnter = _context12.t1;
-
-                      if (!(canEnter === false || typeof canEnter === 'object')) {
-                        _context12.next = 29;
-                        break;
-                      }
-
-                      return _context12.abrupt("return", canEnter);
-
-                    case 29:
-                      return _context12.abrupt("return", true);
-
-                    case 30:
+                    case 21:
                     case "end":
                       return _context12.stop();
                   }
@@ -1598,12 +1670,7 @@
 
                     case 10:
                       changed = _context13.sent;
-                      this.busy = false;
-
-                      if (changed) {
-                        console.debug('[ion-router] route changed', path);
-                      } // emit did change
-
+                      this.busy = false; // emit did change
 
                       if (routeEvent) {
                         this.ionRouteDidChange.emit(routeEvent);
@@ -1611,7 +1678,7 @@
 
                       return _context13.abrupt("return", changed);
 
-                    case 15:
+                    case 14:
                     case "end":
                       return _context13.stop();
                   }
@@ -1657,7 +1724,7 @@
         }, {
           key: "el",
           get: function get() {
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this);
           }
         }]);
 
@@ -1672,7 +1739,7 @@
 
           _classCallCheck(this, RouterLink);
 
-          Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
           /**
            * When using a router, it specifies the transition direction when navigating to
            * another page using `href`.
@@ -1681,7 +1748,7 @@
           this.routerDirection = 'forward';
 
           this.onClick = function (ev) {
-            Object(_theme_5641d27f_js__WEBPACK_IMPORTED_MODULE_3__["o"])(_this2.href, ev, _this2.routerDirection, _this2.routerAnimation);
+            Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["o"])(_this2.href, ev, _this2.routerDirection, _this2.routerAnimation);
           };
         }
 
@@ -1690,16 +1757,16 @@
           value: function render() {
             var _Object;
 
-            var mode = Object(_ionic_global_23e7365a_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+            var mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_2__["b"])(this);
             var attrs = {
               href: this.href,
               rel: this.rel,
               target: this.target
             };
-            return Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
               onClick: this.onClick,
-              "class": Object(_theme_5641d27f_js__WEBPACK_IMPORTED_MODULE_3__["c"])(this.color, (_Object = {}, _defineProperty(_Object, mode, true), _defineProperty(_Object, 'ion-activatable', true), _Object))
-            }, Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("a", Object.assign({}, attrs), Object(_index_92848855_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
+              "class": Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["c"])(this.color, (_Object = {}, _defineProperty(_Object, mode, true), _defineProperty(_Object, 'ion-activatable', true), _Object))
+            }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("a", Object.assign({}, attrs), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
           }
         }]);
 
