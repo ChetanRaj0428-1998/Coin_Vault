@@ -99,12 +99,12 @@
       <ion-col>
                 
   <ion-label for="camera" >Use <br> Camera </ion-label>
-  <ion-radio  (ionFocus)="setPhotoOption(1)" name="camera" aria-label="Custom checkbox that is checked" value="camera" class="form-control" ></ion-radio>
+  <ion-radio  (click)="setPhotoOption(1)" name="camera" aria-label="Custom checkbox that is checked" value="camera" class="form-control" ></ion-radio>
   
   </ion-col>
   <ion-col>
     <ion-label for="gallery" >Choose <br>from Gallery</ion-label>
-    <ion-radio (ionFocus)="setPhotoOption(2)"  name="gallery" aria-label="Custom checkbox"  value="gallery" class="form-control" ></ion-radio>
+    <ion-radio (click)="setPhotoOption(2)"  name="gallery" aria-label="Custom checkbox"  value="gallery" class="form-control" ></ion-radio>
    </ion-col>
    </ion-row>
    </ion-grid>
